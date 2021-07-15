@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=qWz1ulNDKlY
 
 ## Jueves
 
--Hoy se esta terinando de puir la página, corrigiendo errores de ubicación e iconos. Hasta el momento no he podido terminar de configurar el scroll pero he visto videos interesantes como los del plugin, que se basa en como instalarlos, tambien de como hacer hovering en los botones.
+-Hoy se esta terminando de pulir la página, corriguiendo errores de ubicación e iconos. Hasta el momento no he podido terminar de configurar el scroll pero he visto videos interesantes como los del plugin, que se basa en como instalarlos, tambien de como hacer hovering en los botones.
 
 Plugins: https://www.youtube.com/watch?v=ASTvyx_3fO0&t=1s
 Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
