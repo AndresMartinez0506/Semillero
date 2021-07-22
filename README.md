@@ -17,9 +17,16 @@ https://www.youtube.com/watch?v=qWz1ulNDKlY
 Plugins: https://www.youtube.com/watch?v=ASTvyx_3fO0&t=1s
 Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 
-## 16/07/2021
+## Viernes 16/07/2021
 
 -Se siguio el trabajo del diseño con Figma, esta vez de manera más libre ya que se desarrolló un infograma sobre Vannevar Bush, hipertexto, hipermedia, Memex y HTML. En la retroalimentación se valoró el riesgo al momento de el diseño, y me dieron consejos de como no recargar el diseño innecesariamente. Como primer diseño libre me pareció muy buen inicio a pesar de tener muchas cosas por mejorar.
 
 ![image](https://user-images.githubusercontent.com/58794286/126016055-231bc268-91c5-47ec-9fa7-f4694ee53c9c.png)
+
+## Jueves 22/07/2021
+
+- Esta semana se ha trabajado con la pagina free code camp donde por medio de pomodoros hemos manejado codigo de HTML desde cero. Ademas de seguir usando los prototipos de Figma copiados
+
+![image](https://user-images.githubusercontent.com/58794286/126648333-65980fed-3830-45e3-8b50-5147de5eef72.png)
+
 
