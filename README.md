@@ -27,13 +27,8 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 
 ![image](https://user-images.githubusercontent.com/58794286/126016055-231bc268-91c5-47ec-9fa7-f4694ee53c9c.png)
 
-<<<<<<< HEAD
-=======
 ## Jueves 22/07/2021
 
 - Esta semana se ha trabajado con la pagina free code camp donde por medio de pomodoros hemos manejado codigo de HTML desde cero. Ademas de seguir usando los prototipos de Figma copiados
 
 ![image](https://user-images.githubusercontent.com/58794286/126648333-65980fed-3830-45e3-8b50-5147de5eef72.png)
-
-
->>>>>>> e2261e33a1ba15720b872b61542d1838e95a72c1
