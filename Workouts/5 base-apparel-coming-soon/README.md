@@ -1,4 +1,4 @@
-#Pagina 5
+# Pagina 5
 
 Esta fue una de las paginas mas sencillas ya que solo traia un input con un mensaje de error al darle enviar datos. Se manejaron las 2 vistas, con un fondo y una image, ademas del placeholder.
 
