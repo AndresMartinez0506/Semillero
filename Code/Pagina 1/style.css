@@ -1,68 +1,150 @@
+/*Estilos*/
+
 body{
-   background-color: #E7FDFE;
+    margin: 0;
+    width: 1440px;
+    height: 800px;
     display: flex;
+    align-items: center;
+    background-color: #EDF2F8;
+    justify-content: center;
     font-family: "Manrope", sans-serif;
- 
+
+}
+
+main{
+    size: auto;
+    display: flex;
+    border-radius: 9px 9px 9px 9px;
+    background-color: white;
+    box-shadow: rgb(189, 185, 185) 5px 5px 5px 5px;
+
+}
+
+#p2{
+    color: #AEB3B9;
+
 }
 
 h1{
     font-size: 20px;
+    padding: 15px 58px 18px 41px;
+    color: #475060;
+
 }
 
-.descripcion{
-font-size: 13px;
+h3{
+    font-size: 13px;
+    color: #474F5C;
+
 }
 
-main{
-    display: flex;
-    background-color: snow;
-    width: auto;
-    height: auto;
-    align-items: center;
-    margin: 30%;
-    box-shadow: 0px 0px 30px rgb(187, 187, 187);
-}
+.parrafo{
+    font-size: 13px;
+    padding: 0px 58px 15px 41px;
+    color: #848B92;
 
-
-.imagen{
-    display: flex;
-    width: 285px;
-    height: 280px;
-    object-fit: cover;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
-    align-items: center;
-}
-
-.avatar{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
 }
 
 .datos{
-    align-items: center;
-    justify-content: center;
     font-size: 13px;
+    line-height: 30%;
+    padding-left: 15px;
+
 }
 
-.footer{
-    display: flex;
- 
+.derecha{
+    width: 446px;
+    height: 280px;
+
 }
 
-.share{
-    background-color: lightgray;
-    justify-content: right !important;
+.foto1{
+width: 285px;
+height: 280px;
+display: flex;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.boton{
+    border-style: none;
     width: 32px;
     height: 32px;
-    border-radius: 50px;
-    align-self: center;
+    border-radius: 50%;
+
+}
+.boton:hover{
+    opacity: 70%;
+}
+
+.orientacion{
+    padding: 5px 41px 0px 0px;
+    
+
+}
+
+.perfil{
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 0px 0px 40px;
+
+}
+
+.final{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 
 .flecha{
-    height: 13px;
+    height: px;
     width: 16px;
-    align-items: right;
-    justify-content: right;
+
+}
+
+/*Media Query*/
+
+@media screen and (max-width:800px) and (min-width:0px){
+    
+
+
+main{
+    width: 329px;
+    height: 506px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.foto1{
+    width: 329px;
+    height: 201px;
+
+}
+
+.derecha{
+    width: 329px;
+    height: 305px;
+
+}
+
+h1{
+    font-size: 16.1px;
+    padding: 25px 40px 15px 33px;
+
+}
+
+.parrafo{
+    font-size: 13.5px;
+    padding: 0px 40px 22px 33px;
+
+}
+
 }
