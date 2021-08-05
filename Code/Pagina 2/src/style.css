@@ -1,0 +1,93 @@
+/*Estilos*/
+
+body{
+    margin: 0;
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    background-color: #0C122C;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+
+}
+
+main{
+    display: flex;
+
+}
+
+.izquierda{
+    background-color: #1E2C69;
+    display: flex;
+    flex-direction: column;
+    width: 326px;
+    height: 201px;
+    border-radius: 9px 101px 9px 9px;
+    
+
+}
+
+.logo{
+    width: 135px;
+    height: 39.27px;
+    padding: 36px 152px 31.73px 39px;
+
+}
+
+.botones{
+    display: flex;
+    padding: 10px 0px 0px 0px;
+
+}
+
+.doc{
+    width: 48px;
+    height: 48px;
+    padding: 0px 16px 46px 42px;
+
+}
+
+.folder{
+    width: 48px;
+    height: 48px;
+    padding: 0px 16px 45px 0px;
+
+}
+
+.nube{
+    width: 48px;
+    height: 48px;
+}
+
+.derecha{
+    width: 538px;
+    height: 154px;
+    background-color: #1E2C69;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    margin: 49px 0px 0px 54px;
+
+}
+
+.numeros{
+    font-weight: bold;
+    color: #fff;
+    padding: 0px 700px 0px 0px;
+
+}
+
+.texto{
+    font-size: 14px; 
+    color: #fff;
+    font-weight: lighter;
+    padding: 20px 0px 14px 38px;
+
+}
+
+.barra{
+    width: 451px;
+    height: 16px;
+    padding-left: 44px;
+}
