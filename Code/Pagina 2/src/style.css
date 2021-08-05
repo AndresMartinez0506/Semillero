@@ -1,19 +1,26 @@
 /*Estilos*/
-
 body{
-    margin: 0;
-    width: 1440px;
-    height: 800px;
+    margin:0;
+    padding:0;
     display: flex;
     align-items: center;
-    background-color: #0C122C;
+    background-color: #fff;
     justify-content: center;
     font-family: "Raleway", sans-serif;
 
 }
 
 main{
+    width:1440px;
+    height: 800px;
+    background-color: #0C122C;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Imagenes/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
 
 }
 
@@ -24,7 +31,6 @@ main{
     width: 326px;
     height: 201px;
     border-radius: 9px 101px 9px 9px;
-    
 
 }
 
@@ -58,6 +64,7 @@ main{
 .nube{
     width: 48px;
     height: 48px;
+
 }
 
 .derecha{
@@ -72,9 +79,23 @@ main{
 }
 
 .numeros{
+    display: flex;
+    font-size: 12px;
+
+}
+
+.numero1{
     font-weight: bold;
     color: #fff;
-    padding: 0px 700px 0px 0px;
+    display: flex;
+    padding: 0px 384px 38px 40px;
+
+}
+
+.numero2{
+    font-weight: bold;
+    color: #fff;
+    display: flex;
 
 }
 
@@ -88,6 +109,105 @@ main{
 
 .barra{
     width: 451px;
-    height: 16px;
-    padding-left: 44px;
+    height: 20px;
+
 }
+
+.scroll{
+    padding-left: 40px;
+
+}
+
+.cartel{
+    display: none;
+
+}
+
+
+.hoc:hover .botones{
+    display: block;
+}
+
+
+.hdoc{
+    display:none;
+    
+}
+
+.hfolder{
+    display:none;
+    
+}
+
+.hnube{
+    display:none;
+    
+}
+
+/*Media Query*/
+@media screen and (max-width:800px) and (min-width:0px){
+
+body{
+    background-image: none;
+
+}
+main{
+    width: 375px;
+    height: 667px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Imagenes/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    
+}
+
+.derecha{
+    width: 326px;
+    height: 160px;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+
+}
+
+.izquierda{
+    width: 326px;
+    height: 201px;
+    margin-bottom: 16px;
+
+}
+
+.derecha{
+    width: 326px;
+    height: 160px;
+
+}
+
+.barra{
+    width: 262px;
+    height: 20px;
+    padding-left: 30px;
+
+}
+
+.scroll{
+    padding-left: 33px;
+
+}
+
+.numero1{
+    padding-right: 184px;
+    padding-left: 34px;
+
+}
+
+.cartel{
+    display: block;
+    right: px;
+
+}
+
+}
+
