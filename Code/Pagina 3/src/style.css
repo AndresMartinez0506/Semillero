@@ -1,0 +1,186 @@
+/*Estilos*/
+
+body{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Imagenes/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: 10%;
+    background-position-y: 110%;
+
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:1440px;
+    height: 800px;
+    
+}
+
+.textotanya{
+    z-index: 1;
+    position: absolute;
+    width: 632px;
+    height: 304px;
+    display: flex;
+    font-size: 32px;
+    color: #5A5768;
+    bottom: 32%;
+    left: 17%;
+    background-image: url(/Imagenes/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position-x: 16%;
+
+}
+
+.fintanya{
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    left: 16.8%;
+    top: 62%;
+
+}
+
+.funciont{
+    display: flex;
+    position: absolute;
+    left: 105%;
+    top: 31%;
+    width: 118px;
+    color: #BABAC4;
+
+}
+
+.james{
+    display: none;
+
+}
+
+.jamesimg{
+    display: none;
+
+}
+
+.john{
+    display: none;
+
+}
+
+.johnimg{
+    display: none;
+
+}
+
+.abajo{
+    display: flex;
+
+}
+
+.tanyaimg{
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    display: flex;
+    width: 540px;
+    height: 539px;
+    border-radius: 13px;
+
+}
+
+.derecha{
+    width: 1555px;
+    height: 853px;
+    background-image: url(/Imagenes/pattern-bg.svg);
+    background-size: 50%;
+    background-position-x: 90%;
+    background-position-y: 70%;
+    background-repeat: no-repeat;
+
+}
+
+.boton{
+    position: absolute;
+    bottom: 130px;
+    left: 54%;
+    background-color: white;
+    width: 112px;
+    height: 56px;
+    border-radius: 40px;
+    box-shadow: rgb(189, 185, 185) 5px 5px 5px 5px;
+
+}
+
+.prev{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 17px;
+    height: 23px;
+
+}
+
+.sig{
+    position: absolute;
+    top: 30%;
+    left: 66%;
+    width: 19px;
+    height: 23px;
+
+}
+
+/*Media Query*/
+
+@media screen and (max-width:800px) and (min-width:0px){
+
+body{
+    width: 375px;
+    height: 667px;
+    background-image: none;
+
+}
+
+.tanyaimg{
+    width: 570px;
+    height: 570px;
+    left: 28%;
+    top: 15%;
+
+}
+
+.boton{
+    left: 60%;
+    bottom: 18%;
+
+}
+
+.textotanya{
+    width: 700;
+    font-size: 37px;
+    left: 20%;
+    top: 90%;
+    background-position-x: 60%;
+    justify-content: center;
+
+}
+
+.fintanya{
+    font-size: 27px;
+    top: 133%;
+    left: 50%;
+}
+
+.funciont{
+    width: 200px;
+    font-size: 28px;
+    top: 80%;
+    left: 6%;
+    display: flex;
+    
+}
+}
