@@ -23,38 +23,40 @@ main{
     
 }
 
-.textotanya{
+.textojohn{
     z-index: 1;
     position: absolute;
-    width: 632px;
+    width: 640px;
     height: 304px;
     display: flex;
     font-size: 32px;
     color: #5A5768;
-    bottom: 23%;
-    left: 17%;
+    bottom: 22%;
+    left: 16.5%;
     background-image: url(/Imagenes/pattern-quotes.svg);
     background-repeat: no-repeat;
     background-position-x: 16%;
 
 }
 
-.fintanya{
+.finjohn{
     position: absolute;
     display: flex;
     font-size: 20px;
-    left: 16.8%;
+    left: 16.4%;
     top: 73%;
+    width: 180px;
 
 }
 
-.funciont{
+.funcionjt{
     display: flex;
     position: absolute;
-    left: 105%;
+    left: 90%;
     top: 31%;
     width: 118px;
     color: #BABAC4;
+    width: 2500px;
 
 }
 
@@ -63,9 +65,9 @@ main{
 
 }
 
-.tanyaimg{
+.johnimg{
     position: absolute;
-    bottom: 12.5%;
+    bottom: 11%;
     left: 47%;
     display: flex;
     width: 540px;
@@ -87,7 +89,7 @@ main{
 
 .boton{
     position: absolute;
-    bottom: 105px;
+    bottom: 88px;
     left: 51%;
     background-color: white;
     width: 112px;
@@ -103,7 +105,6 @@ main{
     left: 15%;
     width: 17px;
     height: 23px;
-    z-index: 1;
 
 }
 
@@ -127,7 +128,7 @@ body{
 
 }
 
-.tanyaimg{
+.johnimg{
     width: 570px;
     height: 570px;
     left: 28%;
@@ -141,7 +142,7 @@ body{
 
 }
 
-.textotanya{
+.textojohn{
     width: 700;
     font-size: 37px;
     left: 20%;
@@ -151,19 +152,20 @@ body{
 
 }
 
-.fintanya{
+.finjohn{
     font-size: 27px;
     top: 133%;
-    left: 60%;
+    left: 50%;
+    width: 200px;
+
 }
 
-.funciont{
-    width: 200px;
+.funcionjt{
+    width: 400px;
     font-size: 28px;
     top: 80%;
-    left: 6%;
+    left: -40%;
     display: flex;
 
 }
-
 }
