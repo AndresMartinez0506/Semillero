@@ -35,3 +35,8 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 ## Lunes 02/08/2021
 
 - Esta semana comenzamos con HTML y CSS, usando FreeCode, y tambien figma, la idea es poder hacer paginas estaticas que esten bien estructuradas y funciones a nivel de diseño y tengan una codificacion ordenada. Me apoyaré con videos y lectura para poder tener buenas practicas de codificación parta tener un avance rapido y progresivo.
+ 
+## Viernes 06/08/2021
+
+- El final de esta semana se aprendio HTML y CSS recreando las paginas de Figma. Se esta trabajando a FreeCodeCamp para empezar con JS.
+![image](https://user-images.githubusercontent.com/58794286/128572403-f19b32dd-a000-47ee-b08f-2b1f0608937b.png)
