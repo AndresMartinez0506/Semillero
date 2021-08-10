@@ -1,6 +1,5 @@
 /*Estilos*/
 
-
 body{
     display: flex;
     align-items: center;
@@ -9,6 +8,7 @@ body{
     width: 1440px;
     height: 922px;
     background-color: #FAFAFA;
+
 }
 
 
@@ -20,6 +20,7 @@ h2{
     color: #515162;
     left: 501px;
     top: 128px;
+
 }
 
 h3{
@@ -31,7 +32,6 @@ h3{
     color: #494A4E;
     left: 498px;
     top: 77px;
-
 
 }
 
@@ -77,6 +77,7 @@ p{
     position: absolute;
     top: 0%;
     left: 250px;
+
 }
 
 .abajo{
@@ -96,7 +97,6 @@ p{
     border-right: none;
     border-bottom: none;
     background-color: white;
-
 
 }
 
@@ -125,7 +125,6 @@ p{
     border-bottom: none;
     background-color: white;
 
-
 }
 
 .calculator{
@@ -153,7 +152,6 @@ p{
     border-bottom: none;
     background-color: white;
 
-
 }
 
 .team{
@@ -180,7 +178,6 @@ p{
     border-right: none;
     border-bottom: none;
     background-color: white;
-
     
 }
 
@@ -209,16 +206,19 @@ main{
     left: 400px;
     width: 302px;
     height: 164px;
+
 }
 
 h3{
     top: 65px;
     left: 360px;
+
 }
 
 h2{
     top: 115px;
     left: 360px;
+
 }
 h5{
     font-size: 20px;
@@ -226,6 +226,7 @@ h5{
     left: 365px;
     text-align: center;
     width: 333px;
+
 }
 
 .izquierda{
@@ -233,6 +234,7 @@ h5{
     left: 530px;
     width: 311px;
     height: 222px;
+
 }
 
 .arriba{
@@ -240,6 +242,7 @@ h5{
     left: 530px;
     width: 311px;
     height: 222px;
+
 }
 
 .abajo{
@@ -247,6 +250,7 @@ h5{
     left: 530px;
     width: 311px;
     height: 222px;
+
 }
 
 .derecha{
@@ -254,5 +258,7 @@ h5{
     left: 530px;
     width: 311px;
     height: 222px;
+
 }
+
 }
