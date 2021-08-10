@@ -5,12 +5,14 @@ body{
 }
 
 main{
+    position: absolute;
+    top: 10%;
+    left: 11%;
     width: 1440px;
     height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .izquierda{
@@ -20,7 +22,6 @@ main{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 .logo{
@@ -42,7 +43,6 @@ h2{
 h1{
     top: 30%;
     width: 380px;
-
 }
 
 .celular{
@@ -57,7 +57,6 @@ h1{
     position: absolute;
     top: 50%;
     left: 165px;
-
 }
 
 .input{
@@ -66,4 +65,114 @@ h1{
     position: absolute;
     top: 62%;
     left: 165px;
+    border-radius: 50px;
+    border: 1px solid #DECBCF;
+    background-color: #DECBCF;
+    color: white;
+    background-color: #FFF8F9;
+    outline:none;   
+}
+
+::placeholder{
+    font-size: 16px;
+    padding-left: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #DECBCF;
+}
+
+
+.boton{
+    position: absolute;
+    width: 99px;
+    height: 61px;
+    border-radius: 50px;
+    background-color: #F3A7A5;
+    border-style: none;
+    top: 62%;
+    left: 519px;
+}
+
+.hover{
+    display: none;
+
+}
+
+.boton:hover{
+    background-image: url(/Imagenes/hover.svg);
+    background-position-x: -4.7px;
+    background-position-y: -0.8px;
+}
+
+
+.error{
+    display: none;
+}
+
+@media screen and (max-width:1200px) and (min-width:0px){
+
+main{
+    flex-direction: column-reverse;
+    width: 375px;
+    height: 800px;
+    box-shadow: rgb(189, 185, 185) 1px 3px 3px 3px;
+    border-radius: 10px;
+}
+
+.ordenador{
+    display: none;
+}
+
+.logo{
+    position: absolute;
+    top: -45px;
+    left: -140px;
+}
+
+.celular{
+    display: block;
+    padding-top: 84px;
+}
+
+.izquierda{
+    width: 375px;
+    height: 466px;
+    background-image: none;
+    background-color: #FFF7F8;
+    background-size: cover;
+}
+
+h2, h1{
+    text-align: center;
+    font-size: 39px;
+    width: 245px;
+    padding-left: 55px;
+    top: 430px;
+}
+
+h2{
+    top: 370px;
+}
+
+.descripcion{
+    width: 300px;
+    height: 80px;
+    font-size: 14px;
+    text-align: center;
+    left: 40px;
+    top: 550px;
+}
+
+.formulario{
+    position: absolute;
+    top: 680px;
+    left: -140px;
+}
+
+.input{
+    width: 311px;
+}
+
+.boton{
+    left: 385px;
+}
 }
