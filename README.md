@@ -40,3 +40,8 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 
 - El final de esta semana se aprendio HTML y CSS recreando las paginas de Figma. Se esta trabajando a FreeCodeCamp para empezar con JS.
 ![image](https://user-images.githubusercontent.com/58794286/128572403-f19b32dd-a000-47ee-b08f-2b1f0608937b.png)
+
+## Miercoles 11/08/2021
+
+- Estamos haciendo vistas de mobile y de ordenador tanto en figma, como en HTML, se estan empezando a aplicar las animaciones de trancision y los posicionamientos con flex box.
+

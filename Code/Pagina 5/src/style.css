@@ -68,7 +68,7 @@ h1{
     border-radius: 50px;
     border: 1px solid #DECBCF;
     background-color: #DECBCF;
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: #FFF8F9;
     outline:none;   
 }
@@ -94,19 +94,29 @@ h1{
 
 .hover{
     display: none;
-
 }
+
+.mal{
+    display: none;
+}
+
 
 .boton:hover{
     background-image: url(/Imagenes/hover.svg);
-    background-position-x: -4.7px;
-    background-position-y: -0.8px;
+    background-size: 109%;
+    background-position-x: -5.9px;
+    background-position-y: -1.3px;
 }
 
+.input:invalid{
+    border-color: red;
 
-.error{
-    display: none;
 }
+
+.mal:invalid{
+    display: block;
+}
+
 
 @media screen and (max-width:1200px) and (min-width:0px){
 
