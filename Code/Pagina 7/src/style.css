@@ -1,0 +1,133 @@
+body{
+    display: flex;
+    width: 1440px;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6EFF6;
+    font-family: 'Karla', sans-serif;}
+
+main{
+    box-shadow: 2px 2px 5px #bdb7b7;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;}
+
+h1{
+    color: #53A4A7;
+    font-size: 26px;}
+
+.arriba h2{
+    color: #BECF65;
+    font-size: 19px;}
+
+.arriba p{
+    color: #A5A9AC;
+    font-size: 16px;}
+
+.arriba{
+    width: 605px;
+    height: 190px;
+    background-color: #fff;
+    justify-items: center;
+    padding: 29px 0px 0px 28px;
+    border-radius: 10px 10px 0px 0px;}
+
+.abajo{
+    display: flex;}
+
+.precio{
+    display: flex;}
+
+.izquierda, .derecha{
+    width: 317px;
+    height: 259px;}
+
+.izquierda{
+    height: 250px;
+    background-color: #2BB3B1;
+    border-radius: 0px 0px 0px 10px;}
+
+.contenido{
+    padding: 18px 0px 0px 37px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 14px;
+    line-height: 0%;}
+
+
+.izquierda h2{
+    color: #fff;
+    font-size: 20px;}
+
+h3{
+    font-size: 32px;
+    color: #fff;}
+
+.izquierda h6{
+    color: #75DFDF;
+    font-size: 16px;
+    font-weight: 400;}
+
+.izquierda p{
+    color: #fff;}
+
+.enviar{
+    background-color: #BFDF32;
+    border-style: none;
+    width: 238px;
+    height: 51px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px #bdb7b7;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.enviar:hover{
+    background-image: url(/Imagenes/hover.svg);
+    background-position-x: -4px;}
+
+.derecha{
+    height: 250px;
+    background-color: #4ABEBD;
+    color: #fff;
+    border-radius: 0px 0px 10px 0px;}
+
+.derecha h2{
+    font-size: 20px;}
+
+.derecha p{
+    line-height: 22px;
+    font-size: 15px;}
+
+.info{
+    padding: 15px 0px 0px 37px;}
+
+@media screen and (max-width:1200px) and (min-width:0px){
+
+.arriba{
+    flex-direction: column;
+    width: 298px;
+    height: 250px;
+    padding: 29px 0px 0px 18px;}
+
+.arriba p{
+    font-size: 14px;
+    line-height: 25px;}
+
+.abajo{
+    flex-direction: column;}
+
+h1{
+    font-size: 20px;}
+
+h2{
+    font-size: 16px;}
+
+.izquierda{
+    border-radius: 0px;}
+
+.derecha{
+    border-radius: 0px 0px 10px 10px;}
+}

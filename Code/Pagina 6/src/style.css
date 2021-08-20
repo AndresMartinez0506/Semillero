@@ -7,41 +7,34 @@ body{
     justify-content: center;
     background-image: url(/Imagenes/bg-intro-desktop.png);
     background-color: #FF7978;
-    font-family: 'Poppins', sans-serif;
-}
+    font-family: 'Poppins', sans-serif;}
 
 main{
-    display: flex;
-}
+    display: flex;}
 
 .izquierda{
     color: white;
     width: 505px;
     display: flex;
     flex-direction: column;
-    padding: 304px 0px 292px 165px;
-}
+    padding: 304px 0px 292px 165px}
 
 h1{
-    font-size: 49px;
-}
+    font-size: 49px;}
 
 .derecha{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 100px;
-}
+    padding-left: 100px;}
 
 .oferta{
-    position: relative;
     width: 540px;
     height: 60px;
     background-color: #5D54A3;
     color: white;
     text-align: center;
-    border-radius: 8px;
-}
+    border-radius: 8px;}
 
 .formulario{
     display: flex;
@@ -52,15 +45,13 @@ h1{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin-top: 30px;
-}
+    margin-top: 30px;}
 
 .boton, input{
     width: 460px;
     height: 56px;
-    border-radius: 8px;
     outline: none;
-}
+    }
 
 
 input{
@@ -68,6 +59,9 @@ input{
     flex-direction: column;     
     column-width: 10px;
     margin-top: 30px;
+    border-radius: 8px;
+    border-color: #E0E0E0;
+    
 }
 
 .boton{
@@ -76,26 +70,28 @@ input{
     color: white;
     font-size: 17px;
     margin-top: 25px;
-    border: none;
-}
+    border: none;}
 
 .boton:hover{
-    background-image: url(/Imagenes/2.svg);    
-}
+    background-image: url(/Imagenes/2.svg);    }
 
 .pie{
     font-size: 11px;
-    margin-top: 15px;
-}
+    margin-top: 15px;}
 
 @media screen and (max-width:1200px) and (min-width:0px){
 
 main{
     display: flex;
-    flex-direction: column;
-}
+    flex-direction: column;}
 
 .izquierda{
     margin-top: 300px;
     margin-bottom: -200px;
+    text-align: center;}
+
+.derecha{
+    padding-left: 150px;
 }
+}
+

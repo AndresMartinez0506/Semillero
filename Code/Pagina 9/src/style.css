@@ -1,0 +1,55 @@
+body{
+    width: 1440px;
+    height: 3186px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/9\ huddle-landing-page-with-alternating-feature-blocks/bg-hero-desktop);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton1{
+    width: 200px;
+    height: 46px;
+    border-radius: 30px;
+}
+
+.cont1, .cont2, .cont3, .cont4{
+    display: flex;
+}
+
+.cont1 h1{
+    font-size: 40px;
+    width: 400px;
+}
+
+.cont1 p{
+    font-size: 19px;
+    width: 480px;
+
+}
+
+.mockup{
+    width: 692px;
+    height: 494px;
+}
+
+
+.grow, .flowing, .users{
+    width: 407px;
+    height: 338px;
+}
+
+.cartel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+}
