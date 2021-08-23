@@ -1,0 +1,178 @@
+/*Estilos*/
+
+body{
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    background-color: #EDF2F8;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+}
+
+main{
+    width: 731px;
+    height: 276px;
+    display: flex;
+    border-radius: 9px 9px 9px 9px;
+    background-color: white;
+    box-shadow: rgb(189, 185, 185) 5px 5px 5px 5px;
+}
+
+#p2{
+    color: #AEB3B9;
+}
+
+h1{
+    font-size: 20px;
+    padding: 15px 58px 18px 41px;
+    color: #475060;
+}
+
+h3{
+    font-size: 13px;
+    color: #474F5C;
+}
+
+.parrafo{
+    font-size: 13px;
+    padding: 0px 58px 15px 41px;
+    color: #848B92;
+}
+
+.datos{
+    font-size: 13px;
+    line-height: 30%;
+    padding-left: 15px;
+}
+
+.derecha{
+    width: 446px;
+    height: 280px;
+}
+
+.foto1{
+width: 285px;
+height: 280px;
+display: flex;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.boton{
+    border-style: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0px 34px 24px;
+}
+
+.orientacion:hover .select{
+    display: block;
+}
+
+.orientacion:hover .burbuja{
+    display: block;
+}
+
+.perfil{
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 0px 0px 40px;
+}
+
+.final{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.select{
+    display:none;
+    position: absolute;
+    bottom: 198px;
+    left: 1020px;
+}
+
+.burbuja{
+    display:none;
+    position: absolute;
+    bottom: 233px;
+    left: 912px;
+}
+
+.mobile{
+    display: none;
+}
+
+/*Media Query*/
+
+@media screen and (max-width:800px) and (min-width:0px){
+    
+
+
+main{
+    width: 329px;
+    height: 506px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.foto1{
+    width: 329px;
+    height: 201px;
+}
+
+.derecha{
+    width: 329px;
+    height: 305px;
+}
+
+.perfil{
+    padding: 5px 0px 0px 32px;
+}
+
+h1{
+    font-size: 16.1px;
+    padding: 25px 40px 15px 33px;
+}
+
+.parrafo{
+    font-size: 13.5px;
+    padding: 0px 40px 35px 33px;
+}
+
+.boton{
+    margin: 11px 13px 4px 0px;
+}
+
+.orientacion:hover .burbuja{
+    display: none;
+
+}
+
+.orientacion:hover .select{
+    display: none;
+}
+
+.orientacion:hover .mobile{
+    display: block;
+}
+
+
+.orientacion:hover .boton{
+    display: none;
+}
+
+.mobile{
+    display:none;
+    position: absolute;
+    bottom: 37px;
+    left: 555px;
+}
+}
