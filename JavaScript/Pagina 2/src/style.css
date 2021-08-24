@@ -1,0 +1,290 @@
+/*Estilos*/
+body{
+    margin:0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+
+}
+
+main{
+    width:1440px;
+    height: 800px;
+    background-color: #abacb1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Imagenes/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+
+}
+
+.izquierda{
+    position: relative;
+    background-color: #1E2C69;
+    display: flex;
+    flex-direction: column;
+    width: 326px;
+    height: 201px;
+    border-radius: 9px 101px 9px 9px;
+    left: -300px;
+
+}
+
+.logo{
+    width: 135px;
+    height: 39.27px;
+    padding: 36px 152px 31.73px 39px;
+
+}
+
+.botones{
+    display: flex;
+    padding: 10px 0px 0px 0px;
+
+}
+
+.doc{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(/Imagenes/docBtn.svg);
+    width: 48px;
+    height: 48px;
+    left: 15%;
+
+}
+
+.doc:hover{
+    background-image: url(/Imagenes/hoverDoc.svg);
+}
+
+.folder{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(/Imagenes/folderBtn.svg);
+    width: 48px;
+    height: 48px;
+    padding: 0px 16px 45px 0px;
+    left: 120%;
+
+}
+
+.folder:hover{
+    background-image: url(/Imagenes/hoverFolder.svg);
+}
+
+.nube{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(/Imagenes/uploadBtn.svg);
+    width: 48px;
+    height: 48px;
+    left: 90%;
+
+
+}
+
+.nube:hover{
+    background-image: url(/Imagenes//hoverUpload.svg);
+}
+
+.derecha{
+    position: relative;
+    width: 538px;
+    height: 154px;
+    background-color: #1E2C69;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    margin: 49px 0px 0px 54px;
+    left: 260px;
+    top: -118px;
+
+}
+
+.numeros{
+    display: flex;
+    font-size: 12px;
+
+}
+
+.numero1{
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    padding: 0px 384px 38px 40px;
+
+}
+
+.numero2{
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+
+}
+
+.texto{
+    display: flex;
+    font-size: 14px; 
+    color: #fff;
+    font-weight: lighter;
+    padding: 20px 0px 14px 38px;
+
+}
+
+
+
+.gigas{
+    background-color: #151E49;
+    width: 451px;
+    height: 20px;
+    border-radius: 9px;
+    position: relative;
+    left: 30px;
+    bottom: 9px;
+
+}
+
+.barra{
+    position: relative;
+    width: 80%;
+    height: 15px;
+    background: linear-gradient(45deg, #F2A49E, #FB4D92);
+    border-radius: 20px;
+    top: 2px;
+    animation: resbalar 5s;
+}
+
+.circulo{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    right: 0px;
+
+}
+
+@keyframes resbalar{
+    from{
+        width: 5%;
+    }
+
+    to{
+        width: 80%;
+    }
+}
+
+.cartel{
+    display: none;
+    
+}
+
+.comentario{
+    position: absolute;
+    top: -30px;
+    left: 320px;
+
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*Media Query*/
+@media screen and (max-width:800px) and (min-width:0px){
+
+body{
+    background-image: none;
+
+}
+main{
+    width: 375px;
+    height: 667px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Imagenes/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    
+}
+
+.derecha{
+    width: 326px;
+    height: 160px;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+
+}
+
+.izquierda{
+    position: absolute;
+    width: 326px;
+    height: 201px;
+    margin-bottom: 40%;
+    left: 25%;
+
+}
+
+.derecha{
+    position: absolute;
+    width: 326px;
+    height: 160px;
+    left: -100%;
+    top: 220%;
+
+}
+
+.barra{
+    width: 262px;
+    height: 20px;
+    padding-left: 30px;
+
+}
+
+.numero1{
+    padding-right: 184px;
+    padding-left: 34px;
+
+}
+
+.cartel{
+    display: block;
+    right: px;
+
+}
+
+.comentario{
+    display: none;
+}
+
+.gigas{
+    width: 251px;
+    height: 20px;
+    left: 45px;
+    height: 17px;
+}
+
+.cartel{
+    position: absolute;
+    top: 500%;
+    left: 45%;
+}
+
+.barra{
+    width: 50%;
+    height: 12px;
+    top: 20%;
+}
+
+}

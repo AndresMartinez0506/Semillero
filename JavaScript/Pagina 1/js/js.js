@@ -33,28 +33,18 @@ h5.innerText = "Michelle Appleton";
 let h6 = document.createElement("h6");
 h6.innerText = "28 Jun 2020";
 
-
-let button = document.createElement("button");
-button.type = "submit";
-
 let div_boton = document.createElement("div");
 div_boton.setAttribute("class", "boton");
 
-
-let div_overlay = document.createElement("div");
-div_overlay.setAttribute("class", "overlay");
+let button = document.createElement("button");
+button.type = "submit";
+button.setAttribute("class","boton")
 
 let div_redes = document.createElement("div");
 div_redes.setAttribute("class", "redes");
 
-let p_share = document.createElement("p");
-p_share.setAttribute("class", "compartir");
-
-let img_boton_compartir = document.createElement("img");
-img_boton_compartir.setAttribute("class", "boton_compartir");
-
 let img_button = document.createElement("img");
-img_button.src = "images/icon-share.svg";
+img_button.src = "/Imagenes/Boton.svg";
 
 let img_pinterest = document.createElement("img");
 img_pinterest.src = "Imagenes/blanco.svg";
