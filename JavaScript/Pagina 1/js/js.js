@@ -40,14 +40,8 @@ let button = document.createElement("button");
 button.type = "submit";
 button.setAttribute("class","boton")
 
-let div_redes = document.createElement("div");
-div_redes.setAttribute("class", "redes");
-
 let img_button = document.createElement("img");
 img_button.src = "/Imagenes/Boton.svg";
-
-let img_pinterest = document.createElement("img");
-img_pinterest.src = "Imagenes/blanco.svg";
 
 document.body.append(main);
 main.append(img_imagen_seccion);
@@ -63,7 +57,3 @@ div_datos.append(h6);
 div_compartir.append(div_boton);
 div_boton.append(button);
 button.append(img_button);
-div_boton.append(div_overlay);
-div_overlay.append(div_redes);
-div_redes.append(p_share);
-div_redes.append(img_boton_compartir);
