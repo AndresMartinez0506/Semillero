@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(84, 164, 255);
+}
+
+p{
+    font-size: 50px;
+    background-color: #fff;
+    height: 80px;
+    width: 200px;
+}
