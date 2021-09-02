@@ -45,3 +45,6 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 
 - Estamos haciendo vistas de mobile y de ordenador tanto en figma, como en HTML, se estan empezando a aplicar las animaciones de trancision y los posicionamientos con flex box.
 
+## Jueves 02/09/2021
+
+- Hoy estuvimos en la capacitacion manejando cadenas de string y sus respectiuvas funciones, vimos expresiones regulares y como ordenar de manera alfabetica una lista desde JS.
