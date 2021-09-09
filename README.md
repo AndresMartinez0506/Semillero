@@ -48,3 +48,7 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 ## Jueves 02/09/2021
 
 - Hoy estuvimos en la capacitacion manejando cadenas de string y sus respectiuvas funciones, vimos expresiones regulares y como ordenar de manera alfabetica una lista desde JS.
+
+## Jueves 09/09/2021
+
+- El JS 30 de hoy fue con Andres Peña, donde vimos las diferentes funcionalidades de la consola. Estuvo muy interesante ya que no sabia las otras funcionalidades de la consola, donde se pueden crear tablas, mensajes de alerta, listas desplegales y demás.
