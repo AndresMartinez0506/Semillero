@@ -11,6 +11,9 @@ jobList.forEach(job =>{
     const rightContainer = document.createElement('aside');
     rightContainer.classList.add('rightContainer');
 
+    const container = document.createElement('section');
+    container.classList.add('container');
+
 
     const writtenInfo = document.createElement('div');
     writtenInfo.classList.add('writtenInfo');
@@ -18,7 +21,8 @@ jobList.forEach(job =>{
 
     const jobCard = document.createElement('article');
     jobCard.classList.add('jobCard');
-    jobCard.append(leftContainer, rightContainer);
+    jobCard.append(container);
+    container.append(leftContainer,rightContainer);
     jobCard.tags1 = job.tags1;
     jobCard.tags2 = job.tags2;
 
@@ -113,7 +117,7 @@ function jobCardFilter(){
         if(
             tagsArray.length === 0||
             card.tags2.some(tag => {
-                tagsArray.some(selectedTag => selectedTag === tag);
+                {return tagsArray.some(selectedTag => selectedTag === tag)};
             })
         ){
             card.classList.remove("hide");

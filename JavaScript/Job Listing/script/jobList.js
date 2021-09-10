@@ -2,7 +2,7 @@ var jobList = [
   {
     image: "../Imagenes/photosnap.svg",
     logoName: "Photosnap",
-    tags1: ["NEW!", " ", "FEATURED"],
+    tags1: ["NEW!", "FEATURED"],
     title: "Senior Frontend Developer",
     specifics: ["1d ago • Full Time • USA only"],
     tags2: ["Frontend", "Senior", "HTML", "CSS", "JavaScript"],
@@ -10,7 +10,7 @@ var jobList = [
   {
     image: "../Imagenes/manage.svg",
     logoName: "Manage",
-    tags1: ["NEW!", " ", "FEATURED"],
+    tags1: ["NEW!", "FEATURED"],
     title: "Senior Frontend Developer",
     specifics: "1d ago • Part Time • Remote",
     tags2: ["Fullstack", "Midweight", "Python", "CSS", "React"],
