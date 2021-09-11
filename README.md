@@ -52,3 +52,7 @@ Hovering: https://www.youtube.com/watch?v=MqYK5Kmj4Ho
 ## Jueves 09/09/2021
 
 - El JS 30 de hoy fue con Andres Peña, donde vimos las diferentes funcionalidades de la consola. Estuvo muy interesante ya que no sabia las otras funcionalidades de la consola, donde se pueden crear tablas, mensajes de alerta, listas desplegales y demás.
+
+## Viernes 10/09/2021
+
+- Hoy empezamos nuevamente con diseños  propios, donde la base es un formulario para ingresar datos de una tarjeta de credito. Tiene que llevar funcionalidad y realizar las validaciones del formulario. En el JS30, trató sobre el localStorage, y aunque fue un poco confuso estudiando la sintaxis se entiende mucho mejor
