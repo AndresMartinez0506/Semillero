@@ -1,5 +1,7 @@
 body{
     height: 120%;
+	background-image: url(/Imagenes/fondo.jpg);
+	background-size: cover;
 }
 
 * {
@@ -37,7 +39,7 @@ header h2 {
 	font-weight: 300;
 	font-size: 24px;
 	line-height: 24px;
-	color: #919191;
+	color: #fff;
 }
 
 main {
@@ -105,12 +107,20 @@ nav {
 }
 
 .pushbar-carrito.opened{
-    background:  white;
+    background:  rgb(97, 96, 96);
+	width: 400px;
 }
+
 button{
-    width: 100px;
-    height: 30px;
+	background-color: #000;
+	outline: none;
+	border-style: none;
+	color: #fff;
+	width: 120px;
+	font-size: 30px;
 }
+
+
 @media screen and (max-width: 1200px) {
 	header h1 {
 		font-size: 30px;
