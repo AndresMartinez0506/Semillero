@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/index.css">
     <title>Perfil</title>
 </head>
 <body>
-    <header>
-        <span></span>
+    <header id="encabezado">
+        <button type="submit" id="salir" onclick="location.href='./login.html'">Salir</button>            
     </header>
+    <div id="izquierda">
+    </div>
+    <div id="derecha">
+        <label for="input">Añadir Estado</label>
+        <input type="text" placeholder="¿Cómo te sientes?" id="input">
+        <button  id="boton">Publicar</button>
+    </div>
+    <table id="tabla"></table>
+    <script type="module" src="/script/index.js"></script>
 </body>
 </html>
