@@ -1,0 +1,145 @@
+body{
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h1{
+    font-size: 27px;
+    color: #6C6A6A;
+}
+
+#flex{
+    display: flex;
+}
+
+#izquierda{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#derecha{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-left: 30px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 522px;
+    height: 498px;
+}
+
+.input{
+    width: 469px;
+    height: 29px;
+    outline: none;
+    border: 2px solid #F0F0F0;
+    background-color: none;    
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input::placeholder{
+    font-size: 12px;
+}
+
+p{
+    color: #858383;
+    font-size: 10.5px;
+}
+
+b{
+    color: #4886d6;
+    font-size: 10.5px;
+}
+
+.check{
+    width: 9px;
+    height: 9px;
+    cursor: pointer;
+    margin-bottom: -21px;
+    z-index: 1;
+}
+
+.tyc{
+    width: 488px;
+    height: auto;
+    text-indent: 15px;
+}
+
+.boton{
+    border: none;
+    background-color: #2281FF;
+    border-radius: 15px;
+    color: #fff;
+    width: 104px;
+    height: 30px;
+    font-size: 11px;
+    align-self: flex-end;
+    margin-right: 80px;
+    margin-top: 30px;
+}
+
+.boton:hover{
+    background-color: #59a0fd;
+    cursor: pointer;
+}
+
+.pie{
+    height: 103px;
+    background-color: #262A2E;
+    width: 100%;
+    color: #ffff;
+    font-size: 10.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  
+    body{
+        height: auto;
+        justify-content: space-between;
+    }
+
+    main{
+        width: 375px;
+        align-self: center;
+    }
+    
+    #flex{
+        flex-direction: column;
+    }
+
+    img{
+        width: 331px;
+        height: 242px;
+    }
+
+    #izquierda{
+        width: 331px;
+        height: 242px;
+        align-self: center;
+        margin: auto;
+    }
+}

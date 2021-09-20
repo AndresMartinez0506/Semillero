@@ -58,7 +58,7 @@ function agregarEstado() {
     const estado = document.createElement("tr");
     estado.innerHTML = `<td> <input type="checkbox" /> </td>
     <td style="flex-grow"> ${input.value} </td>
-    <td><span onClick="borrar()"> X </span></td>`;
+    <td><span click=borrar()"> X </span></td>`;
 
     tabla.appendChild(estado);
 
