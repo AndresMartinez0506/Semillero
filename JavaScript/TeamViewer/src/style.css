@@ -72,7 +72,7 @@ b{
     font-size: 10.5px;
 }
 
-.check{
+#check{
     width: 9px;
     height: 9px;
     cursor: pointer;
@@ -115,6 +115,39 @@ b{
     align-items: center;
 }
 
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.error{
+	border: 2px solid #FF7979;
+    background-image: url(/Imagenes/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-x: 442px;
+    background-position-y: 3.5px;
+
+}
+
+.bien{
+    border: 2px solid #009300;
+    background-image: url(/Imagenes/bien.png);
+    background-repeat: no-repeat;
+    background-position-x: 442px;
+    background-position-y: 3.5px;
+
+}
+
+
 @media screen and (max-width: 1200px) {
   
     body{
@@ -151,6 +184,7 @@ b{
     .input{
         width: 329px;
         margin: auto;
+        margin-bottom: 10px;
     }
 
     #derecha{
@@ -162,7 +196,7 @@ b{
         margin: auto;
     }
 
-    .check{
+    #check{
         margin-left: 135px;
     }
 
@@ -177,4 +211,9 @@ b{
     text{
         width: 250px;
     }
+
+    .error,  .bien{
+        background-position-x: 302px;
+    }
+
 }
