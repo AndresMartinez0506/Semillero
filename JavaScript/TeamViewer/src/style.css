@@ -119,11 +119,10 @@ b{
   
     body{
         height: auto;
-        justify-content: space-between;
     }
 
     main{
-        width: 375px;
+        width: 470px;
         align-self: center;
     }
     
@@ -132,8 +131,13 @@ b{
     }
 
     img{
-        width: 331px;
-        height: 242px;
+        width: 341px;
+        height: 252px;
+    }
+
+    h1{
+    margin: auto;
+    margin-bottom: 20px;
     }
 
     #izquierda{
@@ -141,5 +145,36 @@ b{
         height: 242px;
         align-self: center;
         margin: auto;
+        margin-top: 25px;
+    }
+
+    .input{
+        width: 329px;
+        margin: auto;
+    }
+
+    #derecha{
+        margin-top: 25px;
+    }
+
+    .tyc{
+        width: 331px;
+        margin: auto;
+    }
+
+    .check{
+        margin-left: 135px;
+    }
+
+    .boton{
+        width: 335px;
+        margin: auto;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    text{
+        width: 250px;
     }
 }
