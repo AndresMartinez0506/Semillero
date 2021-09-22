@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main{
+    display: flex;
+    width: 1428px;
+    justify-content: space-around;
+    background-image: url(/Imagenes/fondoMain.png);
+    background-repeat: no-repeat;
+    background-position-y: 98%;
+    background-position-x: 115px;
+}
+
+.barra{
+    width: 98px;
+    height: 897px;
+    background-color: #4C88B5;
+    margin-left: 40px;
+    padding-top: 40px;
+}
+
+.soporte{
+    display: flex;
+    margin-left: -22.5px;
+    margin-top: -30px;
+}
+
+h1, h2, h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+h3{
+    color: #717171;
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    color: #4C88B5;
+}
+
+#uno{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-image: url(/Imagenes/Circle.svg);
+    background-repeat: no-repeat;
+    background-position-x: 1030px;
+    margin-top: 67px;
+}
+
+.azul{
+    color: #4C88B5;
+}
+
+#abajo{
+    display: flex;
+}
+
+#dos{
+    width: 932px;
+    display: flex;
+    height: 220px;
+    justify-content: space-between;
+    margin-left: 45px;
+    z-index: 1;
+}
+
+.imagenCubo{
+    margin-left: 200px;
+}
+
+.titulo{
+    width: 480px;
+    font-size: 40px;
+    text-align: right;
+    color: #989898;
+    margin-left: -320px;
+    line-height: 60px;
+}
+
+.persona{
+    margin-left: -70px;
+}
+
+.descripVieja, .descripNueva{
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.descripNueva{
+    text-align: right;
+    margin-left: 135px;
+    width: 140px;
+    color: #4C88B5;
+    margin-top: 13px;
+}
+
+.descripVieja{
+    color: #606060;
+    width: 116px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.imagenVista{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
