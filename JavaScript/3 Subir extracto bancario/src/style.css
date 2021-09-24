@@ -27,3 +27,82 @@ main{
 .demo, .fecha{
     color: #667788;
 }
+
+.demo, #formulario{
+    margin-left: 25px;
+}
+
+#formulario{
+    display: flex;
+    width: 646px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 27px;
+    margin-left: 15px;
+}
+
+#izquierda{
+    background-color: #EEEEEE;
+    width: 230px;
+    
+}
+
+.label{
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    background-color: #BBBBBB;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#derecha{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.label::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: #E8E8FF;
+    border-radius: 100px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    transition: .2s;
+}
+
+#boton:checked + .label::after{
+    left: 36px;
+}
+
+#boton:checked + .label{
+    background: rgba(6, 68, 68, 0.664);
+}
+
+#subir{
+    margin-top: 13px;
+}
+
+select{
+    margin-top: 15px;
+}
+
+.divBoton{
+    margin-top: 15px;
+}
+
+select{
+    width: 172px;
+    height: 31px;
+    border-radius: 10px;
+}
