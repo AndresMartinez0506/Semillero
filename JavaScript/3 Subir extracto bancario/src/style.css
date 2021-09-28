@@ -33,11 +33,13 @@ main{
 }
 
 #formulario{
+    margin-left: 35%;
     display: flex;
-    width: 646px;
+    width: 590px;
     height: 280px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 30px;
 }
 
 p{
@@ -50,7 +52,6 @@ p{
 #izquierda{
     background-color: #EEEEEE;
     width: 230px;
-    
 }
 
 .label{
@@ -105,4 +106,24 @@ select{
     width: 172px;
     height: 31px;
     border-radius: 10px;
+}
+
+select:focus{
+    outline: none;
+}
+
+#fin{
+    width: 200px;
+    height: 40px;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(6, 68, 68, 0.664);
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+#fin:hover{
+    background-color: rgba(15, 167, 167, 0.664);
 }

@@ -59,7 +59,7 @@ boton.id = "boton";
 const labelBoton = document.createElement('label');
 labelBoton.classList.add('label');
 
-const inputMes = document.createElement('form'); 
+const inputMes = document.createElement('form');
 
 const selectMes = document.createElement('select');
 
@@ -87,7 +87,7 @@ mesSeis.innerHTML = "11/2021";
 const mesSiete = document.createElement('option');
 mesSiete.innerHTML = "12/2021";
 
-const inputBancos = document.createElement('form'); 
+const inputBancos = document.createElement('form');
 
 const selectBancos = document.createElement('select');
 
@@ -103,7 +103,7 @@ bancoDos.innerHTML = "Bancolombia S.A";
 const bancoTres = document.createElement('option');
 bancoTres.innerHTML = "Davivienda";
 
-const inputCuenta = document.createElement('form'); 
+const inputCuenta = document.createElement('form');
 
 const selectCuenta = document.createElement('select');
 
@@ -116,7 +116,11 @@ cuentaAhorros.innerHTML = "Cuenta de ahorros";
 const cuentaCorriente = document.createElement('option');
 cuentaCorriente.innerHTML = "Cuenta corriente";
 
-body.append(main);
+const botonFinal = document.createElement('button');
+botonFinal.id = "fin";
+botonFinal.innerText = "Subir archivos";
+
+body.append(main, botonFinal);
 main.append(header, formulario);
 header.append(titulo, linea, abajoLinea);
 abajoLinea.append(demo, fecha);
