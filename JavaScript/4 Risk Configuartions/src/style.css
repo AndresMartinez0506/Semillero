@@ -2,23 +2,33 @@
 
 body{
     font-family: 'Sora', sans-serif;
+    display: flex;
+    justify-content: center;
+
 }
 
 main{
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 80%;
+    padding-top: 40px;
+    height: 500px;
 }
 
 h1{
     font-size: 27px;
     font-weight: 300;
     color: #2B8CD6;
+    margin-left: 40px;
 }
 
 .divInputs{
     display: flex;
     flex-direction: column;
+    margin-left: 40px;
 }
 
 #button{
@@ -83,4 +93,93 @@ h1{
 
 #botonEncabezado:hover{
     background-color: #3ca4e9;
+}
+
+.formulario{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 501px;
+    height: 323px;
+    flex-direction: column;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.azul{
+    background-color: #428BCA;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+    z-index: 1;
+}
+
+.equis{
+    width: 33px;
+    height: 33px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.abajoForm{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input{
+    outline: none;
+    border: 1px solid #CFD6DD;
+    background-color: none;
+    border-radius: 8px;
+}
+
+.inputDescripcion{
+    width: 330px;
+    height: 37px;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: #D6E9F9 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.inputValorMinimo, .inputValorMaximo{
+    height: 37px;
+    width: 202px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 18px;
+    width: 130px;
+}
+
+.abajoForm{
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 200px;
+}
+
+.divDescripcion, .divMinimo, .divMaximo{
+    display: flex;
+    margin-bottom: 12px;
+}
+
+#botonGuardar{
+    color: #FFF;
+    background-color: #007acc;
+    width: 105px;
+    height: 35px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 180%;
 }
