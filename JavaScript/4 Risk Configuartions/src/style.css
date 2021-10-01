@@ -53,7 +53,7 @@ h1{
     margin-top: 50px;
 }
 
-.tabla{
+.espacioTabla{
     width: 70%;
     display: flex;
    flex-direction: column;
@@ -73,7 +73,7 @@ h1{
 
 .pEncabezado{
     font-size: 18px;
-    width: 80%;
+    width: 90%;
     text-align: center;
     align-self: center;
     height: auto;
@@ -182,4 +182,23 @@ label{
     border-radius: 10px;
     margin-top: 5px;
     margin-left: 180%;
+}
+
+.tabla{
+    width: 846px;
+    height: 221px;
+}
+
+
+th{
+    font-size: 18px;
+    border: 1px solid #CFD6DD;
+    text-align: center;
+}
+
+td{
+    color: #948B9D;
+    font-size: 18px;
+    border: 1px solid #CFD6DD;
+    text-align: center;
 }

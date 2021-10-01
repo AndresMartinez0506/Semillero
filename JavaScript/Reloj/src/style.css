@@ -1,42 +1,95 @@
-html {
-    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-    background-size: cover;
-    font-family: 'helvetica neue';
-    text-align: center;
-    font-size: 10px;
-    }
-    body {
+body {
+    background-color: rgb(255, 255, 255);
     margin: 0;
     font-size: 2rem;
     display: flex;
     flex: 1;
     min-height: 100vh;
     align-items: center;
-    }
-    .clock {
+  }
+
+div{
+    background-color: transparent;
+}
+
+  .clock {
+    margin: auto;
     width: 30rem;
     height: 30rem;
-    border: 20px solid white;
+    border: 5px solid rgb(255, 0, 0);
     border-radius: 50%;
-    margin: 50px auto;
     position: relative;
-    padding: 2rem;
-    box-shadow:
-    0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #EFEFEF,
-    inset 0 0 10px black,
-    0 0 10px rgba(0,0,0,0.2);
-    }
-    .clock-face {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.circulo{
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(131, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+  .clock-face {
     position: relative;
     width: 100%;
+    display: flex;
+    border: dashed rgb(0, 0, 0);
+    border-radius: 50%;
     height: 100%;
-    transform: translateY(-3px);
-        }
-    .hand {
-    width: 50%;
-    height: 6px;
-    background: black;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+p{
     position: absolute;
+    font-size: 50px;
+    font-weight:900;
+    margin: 0px;
+}
+
+.h9,.h3{    
+    align-self: center;    
+ }
+.h3{
+    right: 0px;
+}
+.h12,.h6{
+    width: 100%;
+    text-align: center;
+}
+.h6{
+    align-self: flex-end;
+}
+
+  .hand {
+    background: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 50%;
     top: 50%;
-    }
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: 0.01s;
+  }
+
+  .second-hand{
+      height: 2px;
+      background-color: red;
+      width: 50%;
+  }
+  
+
+  .hour-hand{
+    height: 10px;
+    width: 40%;
+    left: 10%;
+  }
+
+  .min-hand{
+    height: 6px;
+    width: 45%;
+    left: 5%;
+  }

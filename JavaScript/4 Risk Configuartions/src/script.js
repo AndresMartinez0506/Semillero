@@ -28,8 +28,8 @@ inputEvaluacion.innerHTML = "EVALUACIÓN DE RIESGO";
 const abajo = document.createElement('div');
 abajo.classList.add('abajo');
 
-const tabla = document.createElement('aside');
-tabla.classList.add('tabla');
+const espacioTabla = document.createElement('aside');
+espacioTabla.classList.add('espacioTabla');
 
 const divEncabezado = document.createElement('div');
 divEncabezado.classList.add('divEncabezado');
@@ -43,6 +43,9 @@ botonEncabezado.id = "botonEncabezado";
 botonEncabezado.type = "submit";
 botonEncabezado.innerHTML = "Nuevo";
 
+const tabla = document.createElement('table');
+tabla.classList.add('tabla');
+
 const formulario = document.createElement('form');
 formulario.classList.add('formulario');
 const divAzul = document.createElement('div');
@@ -50,7 +53,6 @@ divAzul.classList.add('azul');
 const equis = document.createElement('button');
 equis.innerHTML = "X";
 equis.classList.add('equis');
-
 
 const abajoForm = document.createElement('div');
 abajoForm.classList.add('abajoForm');
@@ -98,8 +100,8 @@ divDescripcion.append(labelDescripcion, inputDescripcion);
 divMinimo.append(labelValorMinimo, inputValorMinimo);
 divMaximo.append(labelValorMaximo, inputValorMaximo);
 divAzul.append(equis)
-abajo.append(divInputs, tabla);
-tabla.append(divEncabezado);
+abajo.append(divInputs, espacioTabla);
+espacioTabla.append(divEncabezado, tabla);
 divEncabezado.append(pEncabezado, botonEncabezado)
 divInputs.append(inputImpactos, inputProbabilidades, inputRiesgos, inputEvaluacion);
 
@@ -107,6 +109,56 @@ botonEncabezado.addEventListener("click", ()=> {
     formulario.style.display = "block";
 });
 
-equis.addEventListener("click", ()=> {
+equis.addEventListener("click", (event)=> {
     formulario.style.display = "none";
-})
+    event.preventDefault();
+});
+
+botonGuardar.addEventListener("click", ()=> {
+    formulario.style.display = "none";
+});
+
+let datosTabla = [
+    {
+        Código: "31",
+        Descripción: "Bajo",
+        Valor: "2"
+    },
+    {
+        Código: "29",
+        Descripción: "Medio",
+        Valor: "4"
+    },
+    {
+        Código: "30",
+        Descripción: "Catastrófico",
+        Valor: "8"
+    },
+];
+
+let crearTabla = function(lista){
+    let datoTabla = "<tr><th>Código</th><th>Descripción</th><th>Valor</th><th>Acción</th></tr>";
+    for(let tarea of lista){
+        let fila = "<tr> <td>";
+        fila+= tarea.Código;
+        fila += "</td>";
+
+        fila += "<td>";
+        fila+= tarea.Descripción;
+        fila += "</td>";
+
+        fila += "<td>";
+        fila+= tarea.Valor;
+        fila += "</td>";
+
+        fila += "<td>";
+        fila+= tarea.materia;
+        fila += "</td>";
+
+        fila += "</tr>";
+        datoTabla += fila;
+    }
+    return datoTabla;
+};
+
+document.querySelector('.tabla').innerHTML = crearTabla(datosTabla);
