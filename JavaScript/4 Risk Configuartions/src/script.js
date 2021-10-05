@@ -2,7 +2,7 @@ const body = document.body;
 
 const main = document.createElement('main'),
 
-titulo = document.createElement('h1');
+    titulo = document.createElement('h1');
 titulo.innerHTML = "CONFIGURACIÓN DE RIESGOS";
 titulo.classList.add('titulo');
 
@@ -66,6 +66,9 @@ labelDescripcion.classList.add('labelDescripcion');
 
 const inputDescripcion = document.createElement('input');
 inputDescripcion.classList.add('inputDescripcion');
+inputDescripcion.id = "inputDescripcion";
+inputDescripcion.name = "inputDescripcion";
+inputDescripcion.autocomplete= "off";
 
 const divMinimo = document.createElement('div');
 divMinimo.classList.add('divMinimo');
@@ -76,6 +79,9 @@ labelValorMinimo.classList.add('labelValorMinimo');
 
 const inputValorMinimo = document.createElement('input');
 inputValorMinimo.classList.add('inputValorMinimo');
+inputValorMinimo.id = "inputValorMinimo";
+inputValorMinimo.name = "inputValorMinimo";
+inputValorMinimo.autocomplete= "off";
 
 const divMaximo = document.createElement('div');
 divMaximo.classList.add('divMaximo');
@@ -86,6 +92,9 @@ labelValorMaximo.classList.add('labelValorMaximo');
 
 const inputValorMaximo = document.createElement('input');
 inputValorMaximo.classList.add('inputValorMaximo');
+inputValorMaximo.id = "inputValorMaximo";
+inputValorMaximo.name = "inputValorMaximo";
+inputValorMaximo.autocomplete= "off";
 
 const botonGuardar = document.createElement('button');
 botonGuardar.id = "botonGuardar";
@@ -105,16 +114,16 @@ espacioTabla.append(divEncabezado, tabla);
 divEncabezado.append(pEncabezado, botonEncabezado)
 divInputs.append(inputImpactos, inputProbabilidades, inputRiesgos, inputEvaluacion);
 
-botonEncabezado.addEventListener("click", ()=> {
+botonEncabezado.addEventListener("click", () => {
     formulario.style.display = "block";
 });
 
-equis.addEventListener("click", (event)=> {
+equis.addEventListener("click", (event) => {
     formulario.style.display = "none";
     event.preventDefault();
 });
 
-botonGuardar.addEventListener("click", ()=> {
+botonGuardar.addEventListener("click", () => {
     formulario.style.display = "none";
 });
 
@@ -122,7 +131,7 @@ let datosTabla = [
     {
         Código: "31",
         Descripción: "Bajo",
-        Valor: "2"
+        Valor: "2",
     },
     {
         Código: "29",
@@ -136,23 +145,23 @@ let datosTabla = [
     },
 ];
 
-let crearTabla = function(lista){
+let crearTabla = function (lista) {
     let datoTabla = "<tr><th>Código</th><th>Descripción</th><th>Valor</th><th>Acción</th></tr>";
-    for(let tarea of lista){
+    for (let tarea of lista) {
         let fila = "<tr> <td>";
-        fila+= tarea.Código;
+        fila += tarea.Código;
         fila += "</td>";
 
         fila += "<td>";
-        fila+= tarea.Descripción;
+        fila += tarea.Descripción;
         fila += "</td>";
 
         fila += "<td>";
-        fila+= tarea.Valor;
+        fila += tarea.Valor;
         fila += "</td>";
 
         fila += "<td>";
-        fila+= tarea.materia;
+        fila += tarea.Accion;
         fila += "</td>";
 
         fila += "</tr>";
@@ -162,3 +171,50 @@ let crearTabla = function(lista){
 };
 
 document.querySelector('.tabla').innerHTML = crearTabla(datosTabla);
+
+let lista_inputs = Array.from(document.querySelectorAll("input"));
+
+const expresiones = {
+    descripcion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    valores: /^\d{1,3}$/
+}
+
+const validarFormulario = (e) => {
+    switch (e.target.name) {
+        case "inputDescripcion":
+            if (expresiones.descripcion.test(e.target.value)) {
+                document.querySelector(`#inputDescripcion`).classList.remove(`error`);
+                document.querySelector(`#inputDescripcion`).classList.add(`bien`);
+            } else {
+                document.querySelector(`#inputDescripcion`).classList.add(`error`);
+                document.querySelector(`#inputDescripcion`).classList.remove(`bien`);
+            }
+            break;
+
+        case "inputValorMinimo":
+            if (expresiones.valores.test(e.target.value)) {
+                document.querySelector(`#inputValorMinimo`).classList.remove(`error_valores`);
+                document.querySelector(`#inputValorMinimo`).classList.add(`bien_valores`);
+            } else {
+                document.querySelector(`#inputValorMinimo`).classList.add(`error_valores`);
+                document.querySelector(`#inputValorMinimo`).classList.remove(`bien_valores`);
+            }
+            break;
+
+        case "inputValorMaximo":
+            if (expresiones.valores.test(e.target.value)) {
+                document.querySelector(`#inputValorMaximo`).classList.remove(`error_valores`);
+                document.querySelector(`#inputValorMaximo`).classList.add(`bien_valores`);
+            } else {
+                document.querySelector(`#inputValorMaximo`).classList.add(`error_valores`);
+                document.querySelector(`#inputValorMaximo`).classList.remove(`bien_valores`);
+            }
+            break;
+    }
+}
+
+lista_inputs.forEach((input) => {
+    input.addEventListener('keyup', validarFormulario);
+    input.addEventListener('blur', validarFormulario);
+});
+

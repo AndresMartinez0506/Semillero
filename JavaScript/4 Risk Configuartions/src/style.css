@@ -202,3 +202,37 @@ td{
     border: 1px solid #CFD6DD;
     text-align: center;
 }
+
+.error{
+	border: 2px solid #FF7979;
+    background-image: url(/Imagenes/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-x: 290px;
+    background-position-y: 4px;
+}
+
+.bien{
+    border: 2px solid #007acc;
+    background-image: url(/Imagenes/bien.png);
+    background-repeat: no-repeat;
+    background-position-x: 290px;
+    background-position-y: 4px;
+
+}
+
+.error_valores{
+	border: 2px solid #FF7979;
+    background-image: url(/Imagenes/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-x: 163px;
+    background-position-y: 4px;
+}
+
+.bien_valores{
+    border: 2px solid #007acc;
+    background-image: url(/Imagenes/bien.png);
+    background-repeat: no-repeat;
+    background-position-x: 163px;
+    background-position-y: 4px;
+
+}
