@@ -7,11 +7,7 @@ titulo.innerHTML = "CONFIGURACIÓN DE RIESGOS";
 titulo.classList.add('titulo');
 
 const divInputs = document.createElement('div');
-divInputs.classList.add('divInputs')
-
-inputImpactos = document.createElement('button');
-inputImpactos.id = "button";
-inputImpactos.innerHTML = "IMPACTOS";
+divInputs.classList.add('divInputs');
 
 inputProbabilidades = document.createElement('button');
 inputProbabilidades.id = "button";
