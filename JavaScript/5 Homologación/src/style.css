@@ -1,0 +1,102 @@
+main{
+    width: 1857px;
+    height: 722px;
+    color: #3F3D56;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+}
+
+.izquierda{
+    width: 580px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.contenedorEncabezado{
+    display: flex;
+}
+
+.imgEncabezado{
+    width: 63px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.divLetras{
+    width: 217px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.titulo{
+    font-size: 34px;
+    font-weight: lighter;
+    width: 220px;
+    height: 40px;
+    color: #525252;
+}
+
+.directorio{
+    font-size: 21px;
+    font-weight: 600;
+    color: #4479AC;
+    position: absolute;
+    top: 50px;
+}
+
+.divInfo{
+    display: flex;
+    overflow-y: scroll;
+
+}
+
+.botonSeleccionar{
+    display: flex;
+    flex-direction: column;
+    width: 515px;
+    height: 60px;
+    border: none;
+    background-color: #fff;
+    justify-content: center;
+    border-radius: 0px 22px 22px 0px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.botonSeleccionar:hover{
+    background-color: #DEEAFF;
+}
+
+#barraBuscar{
+    width: 485px;
+    height: 41px;
+    outline: none;
+    border: 1px solid #CFD6DD;
+    background-color: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.acceso{
+    font-size: 26px;
+    color: #464646;
+}
+
+.derecha{
+    width: 1200px;
+    height: 662px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-left: 20px;
+    align-self: center;
+    background-image: url(/assets/Background.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 700px;
+    border-radius: 10px;
+}
