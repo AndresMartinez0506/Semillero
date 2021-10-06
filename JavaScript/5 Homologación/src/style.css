@@ -1,3 +1,9 @@
+html{
+    height: 2000px;
+    display: flex;
+    margin-top: 130px;
+}
+
 main{
     width: 1857px;
     height: 722px;
@@ -47,29 +53,21 @@ main{
     font-weight: 600;
     color: #4479AC;
     position: absolute;
-    top: 50px;
+    top: 175px;
 }
 
-.divInfo{
+.tr{
     display: flex;
-    overflow-y: scroll;
-
-}
-
-.botonSeleccionar{
-    display: flex;
-    flex-direction: column;
     width: 515px;
-    height: 60px;
+    height: 90px;
     border: none;
     background-color: #fff;
-    justify-content: center;
     border-radius: 0px 22px 22px 0px;
-    font-weight: 600;
-    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.botonSeleccionar:hover{
+.tr:hover{
     background-color: #DEEAFF;
 }
 
@@ -99,4 +97,27 @@ main{
     background-position-x: center;
     background-size: 700px;
     border-radius: 10px;
+}
+
+.tabla{
+    width: 542px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.cantidad{
+    font-size: 20px;
+    color: #999999;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.descripcion{
+    font-size: 20px;
+    font-weight: 550;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }

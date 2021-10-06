@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Descripcion": "Acceso Total - Descripci髇",
+    "Descripcion": "Acceso Total - Descripci贸n",
     "Cantidad": 171
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "Id": 3,
-    "Descripcion": "Tesorer韆",
+    "Descripcion": "Tesorer铆a",
     "Cantidad": 3
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "Id": 7,
-    "Descripcion": "Gerencia Implementaci髇",
+    "Descripcion": "Gerencia Implementaci贸n",
     "Cantidad": 1
   },
   {
@@ -86,7 +86,7 @@
   },
   {
     "Id": 50,
-    "Descripcion": "Facturaci髇",
+    "Descripcion": "Facturaci贸n",
     "Cantidad": 1
   },
   {
@@ -101,7 +101,7 @@
   },
   {
     "Id": 100,
-    "Descripcion": "Impresi髇 - Consulta Documentos",
+    "Descripcion": "Impresi贸n - Consulta Documentos",
     "Cantidad": 2
   },
   {
@@ -241,7 +241,7 @@
   },
   {
     "Id": 6554,
-    "Descripcion": "SGP Revisi髇",
+    "Descripcion": "SGP Revisi贸n",
     "Cantidad": 20
   },
   {

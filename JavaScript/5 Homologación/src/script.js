@@ -31,55 +31,16 @@ barraBuscar.autocomplete = "off";
 const divInfo = document.createElement('div');
 divInfo.classList.add('divInfo');
 
-const divSeleccionar = document.createElement('div');
-divSeleccionar.classList.add('divSeleccionar');
-// const botonBolivar = document.createElement('button');
-// botonBolivar.innerHTML = "Acceso Total Bolivar";
-// botonBolivar.classList.add('botonSeleccionar');
-
-// const botonContable = document.createElement('button');
-// botonContable.innerHTML = "Analista Contable 1";
-// botonContable.classList.add('botonSeleccionar');
-
-// const botonClientes = document.createElement('button');
-// botonClientes.innerHTML = "Analista Contable Clientes";
-// botonClientes.classList.add('botonSeleccionar');
-
-// const botonNomina = document.createElement('button');
-// botonNomina.innerHTML = "Analista de Nomina";
-// botonNomina.classList.add('botonSeleccionar');
-
-// const botonNominayDirectora = document.createElement('button');
-// botonNominayDirectora.innerHTML = "Analista de Nomina y Directora de Contabilidad";
-// botonNominayDirectora.classList.add('botonSeleccionar');
-
-// const botonAsesor = document.createElement('button');
-// botonAsesor.innerHTML = "Asesor Comercial";
-// botonAsesor.classList.add('botonSeleccionar');
-
-// const botonConRegistro = document.createElement('button');
-// botonConRegistro.innerHTML = "Asesor Comercial con registro de visitas";
-// botonConRegistro.classList.add('botonSeleccionar');
-
-// const botonTramites = document.createElement('button');
-// botonTramites.innerHTML = "Asesor de tramites";
-// botonTramites.classList.add('botonSeleccionar');
-
-// const botonTramites2 = document.createElement('button');
-// botonTramites2.innerHTML = "Asesor de tramites empresariales";
-// botonTramites2.classList.add('botonSeleccionar');
-
-// const botonAccionista = document.createElement('button');
-// botonAccionista.innerHTML = "Accionista de bienes raices";
-// botonAccionista.classList.add('botonSeleccionar');
-
-// const botonBussines = document.createElement('button');
-// botonBussines.innerHTML = "Bussines Manager";
-// botonBussines.classList.add('botonSeleccionar');
+const table = document.createElement('table');
+table.classList.add('tabla')
+const thead = document.createElement('thead');
+const tr = document.createElement('tr');
+const thUno = document.createElement('th');
+const thDos = document.createElement('th');
+const tbody = document.createElement('tbody')
 
 const derecha = document.createElement('aside');
 derecha.classList.add('derecha');
-
 
 body.append(main);
 main.append(izquierda, derecha);
@@ -87,25 +48,42 @@ izquierda.append(contenedorEncabezado, buscador, divInfo);
 contenedorEncabezado.append(imgEncabezado, divLetras);
 divLetras.append(titulo, directorio);
 buscador.append(acceso, barraBuscar);
-divInfo.append(divSeleccionar);
-// divSeleccionar.append(botonBolivar, botonContable, botonClientes, botonNomina,
-//     botonNominayDirectora, botonAsesor, botonConRegistro, botonTramites, botonTramites2, botonAccionista, botonBussines);
+divInfo.append(table);
+table.append(thead, tbody);
+thead.append();
+tr.append(thUno, thDos);
 
-document.getElementById('cargar').addEventListener('click', cargarLista);
-
-function cargarLista(){
-    fetch('NivelesDeAceso.json')
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){
-        let html = '';
-        data.forEach(function(niveles) {
-            html += `
-                <li>${niveles.Descripcion} ${niveles.Cantidad}</li>
-                `
-        });
-
-            document.getElementsByClassName('divSeleccionar').innerHTML = html;
-    })
+function cargarUsuarios() {
+    fetch('./json/NivelesDeAceso.json')
+        .then(respuesta => respuesta.json()) //formato para mostrar la info
+        .then(respuesta => {
+            respuesta.forEach(usuario => {
+                const row = document.createElement('tr');
+                row.classList.add('tr')
+                row.innerHTML += `
+          <td class="descripcion">${usuario.Descripcion}</td><td class="cantidad">${usuario.Cantidad}</td>
+          `
+                table.appendChild(row);
+            });
+        }) //se muestra info
 }
+
+cargarUsuarios();
+
+// const res = await fetch('./json/NivelesDeAceso.json');
+// const data = await res.json();
+
+
+// let datosIzquierda = JSON.parse(localStorage.getItem('./json/NivelesDeAceso.json'))
+
+// datosIzquierda.forEach(element => {
+//     let texto = document.createElement('p');
+//     texto.classList.add ('texto');
+//     texto.textContent = element.Descripcion; 
+//     divTabla = document.createElement('div');
+//     divTabla.classList.add('divTabla');
+
+//     let cantidad = document.createElement('p');
+//     cantidad.classList.add('cantidad');
+//     texto.textContent = element.Cantidad; 
+// });
