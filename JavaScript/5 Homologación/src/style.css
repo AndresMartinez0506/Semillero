@@ -121,3 +121,10 @@ main{
     display: flex;
     align-items: center;
 }
+
+.tablaAcceso{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 400px;
+}
