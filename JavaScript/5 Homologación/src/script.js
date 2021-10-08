@@ -38,9 +38,17 @@ tr.classList.add('tr');
 const derecha = document.createElement('aside');
 derecha.classList.add('derecha');
 
+const imgDerecha = document.createElement('img');
+imgDerecha.classList.add('imgDerecha');
+imgDerecha.src = "./assets/Background.svg";
+
 const tableDerecha = document.createElement('table');
 tableDerecha.classList.add('tablaAcceso');
 const trDerecha = document.createElement('tr');
+
+const tableDerechaDos = document.createElement('table');
+tableDerechaDos.classList.add('tablaCoordi');
+const trDerechaDos = document.createElement('tr');
 
 
 body.append(main);
@@ -50,65 +58,87 @@ contenedorEncabezado.append(imgEncabezado, divLetras);
 divLetras.append(titulo, directorio);
 buscador.append(acceso, barraBuscar);
 divInfo.append(table);
-derecha.append(tableDerecha);
+derecha.append(imgDerecha, tableDerecha, tableDerechaDos);
 
 function cargarNiveles() {
     fetch('./json/NivelesDeAceso.json')
         .then(respuesta => respuesta.json()) //mostrar la info en json
         .then(respuesta => {
             respuesta.forEach(usuario => {
-                const row = document.createElement('tr');
-                row.classList.add('tr')
-                row.innerHTML += `
+                table.innerHTML += `
           <td class="descripcion">${usuario.Descripcion}</td><td class="cantidad">${usuario.Cantidad}</td>
           `
-          table.appendChild(row);
+          
+          table.addEventListener('click', () => {
+              enviarDatos(usuario.Descripcion);
+          });
 
-
+          
         });
     })
 }
 
+function enviarDatos(dato){
 
+    imgDerecha.style.display = "none";
+
+    if (dato == "Acceso Total - Descripción") {
+
+        llenarTotal();
+    
+    }
+
+    else if (dato == "Coordinadora de Calidad") {
+
+        llenarCoordinadora();
+
+    }
+
+};
 
 cargarNiveles();
 
-function mostrarDerecha() {
-    fetch('./json/AccesoTotal.json')
-        .then(respuesta => respuesta.json())
-        .then(respuesta => {
-            respuesta.forEach(datoDerecha => {
-                const row = document.createElement('tr');
-                row.classList.add('tablaDerecha')
-                row.innerHTML += `
-          <td class="nombreDerecha">${datoDerecha.Nombre}</td><td class="logginDerecha">${datoDerecha.Loggin}</td><td class="homologacionDerecha">${datoDerecha.Homologacion}</td>
-          `
-                tableDerecha.appendChild(row);
-            });
-        })
-  
-}
-mostrarDerecha();
 
 //filtro de busqueda
 document.getElementById('barraBuscar').addEventListener('keyup', buscadorInterno);
 
-function buscadorInterno(){
+function buscadorInterno() {
 
-    filter = barraBuscar.value.toUpperCase();
+    filtro = barraBuscar.value.toUpperCase();
     li = table.getElementsByTagName('tr');
 
-    for ( i = 0; i < li.length; i++){
+    for (i = 0; i < li.length; i++) {
 
         td = li[i].getElementsByTagName('td')[0];
         textValue = td.textContent || td.innerText;
 
-        if(textValue.toUpperCase().indexOf(filter) > -1){
+        if (textValue.toUpperCase().indexOf(filtro) > -1) {
 
             li[i].style.display = "";
-        }else{
+
+        } else {
             li[i].style.display = "none";
+
         }
     }
-
 }
+//tabla acceso total
+function llenarTotal(){localStorage.setItem('accesoTotal', fetch('./json/AccesoTotal.json').then(total => total.json()).then(total => {
+    total.forEach(acceso => {
+        tableDerecha.innerHTML += `
+  <input type="checkbox"><td class="nombre">${acceso.Nombre}</td><td class="loggin">${acceso.Loggin}</td><td class="homo">${acceso.Homologacion}</td>
+  `
+    });
+})
+)};
+
+//tabla coordinadora
+function llenarCoordinadora(){localStorage.setItem('accesoTotal', fetch('./json/CoordinadoraDeCalidad.json').then(coordinadora => coordinadora.json()).then(coordinadora => {
+    coordinadora.forEach(coor => {
+        tableDerechaDos.innerHTML += `
+        
+ <td class="nombre">${coor.Nombre}</td><td class="loggin">${coor.Loggin}</td><td class="homo">${coor.Homologacion}</td>
+  `
+    });
+})
+)};
