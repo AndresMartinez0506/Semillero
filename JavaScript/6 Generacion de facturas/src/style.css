@@ -1,0 +1,269 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 1785px;
+    height: 699px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.imgFondo{
+    margin-top: 20px;
+    display: flex;
+    width: 35%;
+}
+
+.encabezadoFiltro{
+    display: flex;
+    height: 51px;
+    width: 98.3%;
+    background-color: #113D72;
+    align-self: center;
+    border-radius: 15px 15px 0px 0px;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+h4{
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+h1{
+    color: #262626;
+    font-size: 47px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.contenedorBuscar{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 99%;
+    height: 390px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 15px;
+}
+
+.contenedorUno{
+    display: flex;
+    width: 931px;
+    height: 89px;
+    border-radius: 15px;
+    background-color: #F7F7F7;
+    margin: 0px 0px 36px 34px;
+    justify-content: space-around;
+}
+
+.contenedorDos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1533px;
+    height: 172px;
+    border-radius: 15px;
+    background-color: #F7F7F7;
+    margin-left: 34px;
+}
+
+.divAbajo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.contenedorFechaInicial, .contenedorFechaFinal, .contenedorMoneda,
+.contenedorOrdenFacturacion, .contenedorCliente, .contenedorModeloNegocio{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.imgCalendario, .imgCalendarioFinal{
+    width: 35px;
+    height: 39px;
+    margin-right: 20px;
+}
+
+p{
+    font-size: 20px;
+    color: #3E3E3E;
+}
+
+.inputFechaInicial, .inputFechaFinal, .selectMoneda,
+.inputCliente, .inputFacturacion, .inputNegocio{
+    width: 320px;
+    height: 33px;
+    border-radius: 5px;
+    border: 2px solid #D8DDE1;
+    outline: none;
+}
+
+.inputFechaInicial, .inputFechaFinal, 
+.inputFacturacion, .inputCliente, .inputNegocio{
+    outline: none;
+}
+
+.sectionInfoFecha,.sectionInfoFechaFinal, .sectionOrdenFacturacion, 
+.sectionCliente, .sectionNegocio, .sectionMoneda{
+    line-height: 0px;
+    margin-left: 25px;
+}
+
+.inputCliente, .inputNegocio::placeholder{
+    background-image: url(/Imagenes/icono_lupa_buscar.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+    font-size: 20px;
+    color: #A3A5B2;
+    padding-left: 25px;
+}
+
+.inputFacturacion, .inputNegocio::placeholder{
+    font-size: 20px;
+    color: #A3A5B2;
+}
+
+#botonConsultar{
+    display: flex;
+    width: 154px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2267A0;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    background-image: url(/Imagenes/icono_consultar.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 14px;
+    padding-left: 40px;
+    margin-right: 10px;
+}
+
+#botonConsultar:hover{
+    background-color: #2990e4;
+    cursor: pointer;
+}
+
+.ocultar{
+    display: none;
+}
+
+.achicar{
+    height: 90px;
+}
+
+.cambio{
+    height: 249px;
+}
+
+.error{
+	border: 2px solid #FF7979;
+    background-repeat: no-repeat;
+    background-position-x: 442px;
+    background-position-y: 3.5px;
+}
+
+.bien{
+    border: 2px solid #009300;
+    background-repeat: no-repeat;
+    background-position-x: 442px;
+    background-position-y: 3.5px;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background-image: url(/Imagenes/NUEVO_CALENDARIO.svg);
+    background-position: right;
+    position: relative;
+    left: 1px;
+    width: 22px;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #2267A0;
+    background-size: auto;
+    background-position: center;
+}
+
+.loader-container{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.loader-container .loader{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: solid 8px transparent;
+    border-top-color: #93DBE9;
+    border-left-color: #93DBE9;
+    border-radius: 50%;
+    animation: loader 1.2s linear infinite;
+}
+
+.loader-container .loader2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border: solid 8px transparent;
+    border-top-color: #689CC5;
+    border-left-color: #689CC5;
+    border-radius: 50%;
+    animation: loader2 1.2s linear infinite;
+}
+
+@keyframes loader{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes loader2{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+
+    }
+}
+
+.selectMoneda{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    color: #262626;
+}
