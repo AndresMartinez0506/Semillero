@@ -128,7 +128,7 @@ p{
     margin-left: 25px;
 }
 
-.inputCliente, .inputNegocio::placeholder{
+.inputCliente::placeholder{
     background-image: url(/Imagenes/icono_lupa_buscar.svg);
     background-repeat: no-repeat;
     background-position-y: center;
@@ -138,7 +138,17 @@ p{
     padding-left: 25px;
 }
 
-.inputFacturacion, .inputNegocio::placeholder{
+.inputFacturacion::placeholder{
+    font-size: 20px;
+    color: #A3A5B2;
+}
+
+.inputNegocio::placeholder{
+    font-size: 20px;
+    color: #A3A5B2;
+}
+
+input:focus{
     font-size: 20px;
     color: #A3A5B2;
 }
@@ -180,17 +190,19 @@ p{
 }
 
 .error{
-	border: 2px solid #FF7979;
+	border: 2px solid #DD2020;
+    background-image: url(/Imagenes/mal.svg);
     background-repeat: no-repeat;
-    background-position-x: 442px;
-    background-position-y: 3.5px;
+    background-position-x: 97%;
+    background-position-y: center;
 }
 
 .bien{
-    border: 2px solid #009300;
+    border: 2px solid #113D72;
+    background-image: url(/Imagenes/bien.svg);
     background-repeat: no-repeat;
-    background-position-x: 442px;
-    background-position-y: 3.5px;
+    background-position-x: 97%;
+    background-position-y: center;
 }
 
 
@@ -205,6 +217,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     background-color: #2267A0;
     background-size: auto;
     background-position: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    cursor: pointer;
 }
 
 .loader-container{
@@ -226,7 +242,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     border-top-color: #93DBE9;
     border-left-color: #93DBE9;
     border-radius: 50%;
-    animation: loader 1.2s linear infinite;
+    animation: loader 0.4s linear infinite;
 }
 
 .loader-container .loader2{
@@ -239,7 +255,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     border-top-color: #689CC5;
     border-left-color: #689CC5;
     border-radius: 50%;
-    animation: loader2 1.2s linear infinite;
+    animation: loader2 0.4s linear infinite;
 }
 
 @keyframes loader{
@@ -261,9 +277,18 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     }
 }
 
+.opacidad{
+    opacity: 70%;
+}
+
 .selectMoneda{
     display: flex;
     justify-content: space-around;
     font-size: 16px;
     color: #262626;
+}
+
+.divNegocio{
+    height: 400px;
+    overflow-y: scroll;
 }

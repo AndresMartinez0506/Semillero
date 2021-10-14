@@ -66,6 +66,8 @@ tituloFacturacion.innerHTML = "Orden de facturación";
 const inputFacturacion = document.createElement('input');
 inputFacturacion.classList.add('inputFacturacion');
 inputFacturacion.placeholder = "Número de orden de facturación";
+inputFacturacion.id = "numeros";
+inputFacturacion.type = "text";
 
 const contenedorCliente = document.createElement('div');
 contenedorCliente.classList.add('contenedorCliente');
@@ -81,6 +83,8 @@ tituloCliente.innerHTML = "Cliente";
 const inputCliente = document.createElement('input');
 inputCliente.classList.add('inputCliente');
 inputCliente.placeholder = "Buscar el cliente";
+inputCliente.id = "letras";
+inputCliente.type = "text";
 
 const contenedorModeloNegocio = document.createElement('div');
 contenedorModeloNegocio.classList.add('contenedorModeloNegocio');
@@ -96,6 +100,8 @@ tituloNegocio.innerHTML = "Modelo de negocio";
 const inputNegocio = document.createElement('input');
 inputNegocio.classList.add('inputNegocio');
 inputNegocio.placeholder = "Buscar el modelo de negocio";
+inputNegocio.id = "letras";
+inputNegocio.type = "text";
 
 const contenedorMoneda = document.createElement('div');
 contenedorMoneda.classList.add('contenedorMoneda');
@@ -156,47 +162,77 @@ encabezadoFiltro.addEventListener('click', () => {
     imgFondo.classList.toggle('ocultar')
 });
 
-const lista_inputs = Array.from(document.querySelectorAll("input"));
+const lista_inputsLetras = Array.from(document.querySelectorAll("#letras"));
 
 const expresiones = {
-    dato: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    letra: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    factura: /^\d{5,16}$/
 }
 
-const validarFormulario = (e) => {
-    switch (e.target.value) {
-        case "inputFacturacion":
-            if (expresiones.dato.test(e.target.value)) {
-                document.querySelector('.inputFacturacion').classList.remove('error');
-                document.querySelector('inputFacturacion').classList.add('bien');
-                console.log('bien');
-            } else {
-                document.querySelector('.inputFacturacion').classList.add('error');
-                document.querySelector('.inputFacturacion').classList.remove('bien');
-                console.log('mal');
-            }
+lista_inputsLetras.forEach((input) => {
+    input.addEventListener('keyup', ()=>{
+        if (expresiones.letra.test(input.value)) {
+            input.classList.remove('error');
+            input.classList.add('bien');
+            console.log("bien")
 
-            break;
+        } else {
+            input.classList.add('error');
+            input.classList.remove('bien');
+            console.log("mal");
+            
+        }
+    });
+    input.addEventListener('blur', ()=>{
+        if (expresiones.letra.test(input.value)) {
+            input.classList.remove('error');
+            input.classList.add('bien');
+            console.log("bien")
 
-        case "inputNegocio":
-            if (expresiones.dato.test(e.target.value)) {
-                document.querySelector('.inputNegocio').classList.remove('error');
-                document.querySelector('.inputNegocio').classList.add('bien');
-            } else {
-                document.querySelector('.inputNegocio').classList.add('error');
-                document.querySelector('.inputNegocio').classList.remove('bien');
-            }
-            break;
-    }
-}
-
-lista_inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
+        } else {
+            input.classList.add('error');
+            input.classList.remove('bien');
+            console.log("mal");
+        }
+    });
 });
 
+inputFacturacion.addEventListener('keyup', ()=>{
+        if (expresiones.factura.test(inputFacturacion.value)) {
+            inputFacturacion.classList.remove('error');
+            inputFacturacion.classList.add('bien');
+            console.log("bien")
+
+        } else {
+            inputFacturacion.classList.add('error');
+            inputFacturacion.classList.remove('bien');
+            console.log("mal");
+            
+        }
+    });
+    inputFacturacion.addEventListener('blur', ()=>{
+        if (expresiones.factura.test(inputFacturacion.value)) {
+            inputFacturacion.classList.remove('error');
+            inputFacturacion.classList.add('bien');
+            console.log("bien")
+
+        } else {
+            inputFacturacion.classList.add('error');
+            inputFacturacion.classList.remove('bien');
+            console.log("mal");
+        }
+    });
+
 botonConsultar.addEventListener('click', () => {
-    loader.style.display = "block"
-})
+    loader.style.display = "block";
+    setTimeout(() => {
+        loader.style.display = "none";
+        cargarModeloNegocio();
+        imgFondo.style.display = "none";
+        main.style.height = "100%"
+    }, 400);
+
+});
 
 
 fetch('./json/monedas.json')
@@ -210,3 +246,22 @@ fetch('./json/monedas.json')
           `
         })
     });
+
+const Divnegocio = document.createElement('div');
+function cargarModeloNegocio() {
+    fetch('./json/negocios.json')
+        .then(respuesta => respuesta.json())
+        .then(respuesta => {
+            respuesta.forEach(modelo => {
+                Divnegocio.classList.add('divNegocio');
+                let negocio = document.createElement('div');
+                negocio.classList.add('negocio');
+                main.append(Divnegocio);
+                Divnegocio.append(negocio);
+                negocio.innerHTML += `
+          ${modelo.nombre}-${modelo.tipoDocumentoFacturaDiaria}${modelo.descripcionDocumentoFacturaDiaria}-${modelo.conceptoCXC}
+          `
+            })
+        })
+};
+
