@@ -70,7 +70,7 @@ h1{
     height: 89px;
     border-radius: 15px;
     background-color: #F7F7F7;
-    margin: 0px 0px 36px 34px;
+    margin: 0px 400px 36px 40px;
     justify-content: space-around;
 }
 
@@ -88,6 +88,12 @@ h1{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+.divArriba{
+    display: flex;
+    align-items: center;
+
 }
 
 .contenedorFechaInicial, .contenedorFechaFinal, .contenedorMoneda,
@@ -153,7 +159,7 @@ input:focus{
     color: #A3A5B2;
 }
 
-#botonConsultar{
+#botonConsultar, #botonFiltrar{
     display: flex;
     width: 154px;
     height: 52px;
@@ -164,7 +170,6 @@ input:focus{
     align-items: center;
     justify-content: center;
     font-size: 21px;
-    background-image: url(/Imagenes/icono_consultar.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 14px;
@@ -172,13 +177,49 @@ input:focus{
     margin-right: 10px;
 }
 
+#botonConsultar{
+    background-image: url(/Imagenes/icono_consultar.svg);
+}
+
+#botonFiltrar{
+    background-image: url(/Imagenes/icono_filtrar.svg);
+    margin-left: 120px;
+    display: none;
+}
+
 #botonConsultar:hover{
     background-color: #2990e4;
     cursor: pointer;
 }
 
+#botonFiltrar:hover{
+    background-color: #2990e4;
+    cursor: pointer;
+}
+
+#botonGenerar:hover{
+    background-color: #2267A0;
+    cursor: pointer;
+}
+
+#botonGenerar{
+    width: 154px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    background-color: #aaaaaa;
+    color: #fff;
+    font-size: 21px;
+    margin-right: 70px;
+    display: none;
+}
+
 .ocultar{
     display: none;
+}
+
+.mostrar{
+    display: block;
 }
 
 .achicar{
@@ -277,10 +318,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover{
     }
 }
 
-.opacidad{
-    opacity: 70%;
-}
-
 .selectMoneda{
     display: flex;
     justify-content: space-around;
@@ -288,7 +325,74 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover{
     color: #262626;
 }
 
-.divNegocio{
-    height: 400px;
-    overflow-y: scroll;
+.tabla{    
+    width: 100%;
+    margin-top: 15px;
+    display: none;
+
+}
+
+td{
+    width: 300px;
+    height: 30px;
+    text-align: center;   
+}
+
+.seleccionado{
+    cursor: pointer;
+    background-image: url(/Imagenes/checkbox_gris.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+th{
+    font-size: 20px;
+}
+
+.divGenerado{
+    width: 1072px;
+    height: 334px;
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.imgChecked{
+    cursor: pointer;
+    background-image: url(/Imagenes/imgChecked.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.barraAzul{
+    width: 100%;
+    height: 40px;
+    background-color: #2267A0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.equis{
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-self: end;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 15px;
+}
+
+.tituloBarraAzul{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 15px;
 }

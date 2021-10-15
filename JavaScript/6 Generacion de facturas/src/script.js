@@ -16,6 +16,9 @@ const cajaContenedores = document.createElement('div');
 const contenedorUno = document.createElement('div');
 contenedorUno.classList.add('contenedorUno');
 
+const divArriba = document.createElement('div');
+divArriba.classList.add('divArriba');
+
 const contenedorFechaInicial = document.createElement('div');
 contenedorFechaInicial.classList.add('contenedorFechaInicial');
 const imgCalendario = document.createElement('img');
@@ -45,6 +48,14 @@ tituloFechaFinal.innerHTML = "Fecha final";
 const inputFechaFinal = document.createElement('input');
 inputFechaFinal.classList.add('inputFechaFinal');
 inputFechaFinal.type = "date";
+
+const botonFiltrar = document.createElement('button');
+botonFiltrar.id = "botonFiltrar";
+botonFiltrar.innerHTML = "Filtrar";
+
+const botonGenerar = document.createElement('button');
+botonGenerar.id = "botonGenerar";
+botonGenerar.innerHTML = "Generar";
 
 const divAbajo = document.createElement('div');
 divAbajo.classList.add('divAbajo');
@@ -119,7 +130,6 @@ selectMoneda.classList.add('selectMoneda');
 
 const botonConsultar = document.createElement('button');
 botonConsultar.id = "botonConsultar";
-botonConsultar.src = "/Imagenes/icono_consultar.svg";
 botonConsultar.innerHTML = "Consultar";
 
 const loader = document.createElement('div');
@@ -135,7 +145,8 @@ loaderDos.classList.add('loader2');
 body.append(main);
 main.append(contenedorBuscar, imgFondo, loader);
 contenedorBuscar.append(encabezadoFiltro, cajaContenedores);
-cajaContenedores.append(contenedorUno, divAbajo);
+cajaContenedores.append(divArriba, divAbajo);
+divArriba.append(contenedorUno, botonFiltrar, botonGenerar);
 divAbajo.append(contenedorDos, botonConsultar);
 contenedorUno.append(contenedorFechaInicial, contenedorFechaFinal);
 contenedorFechaInicial.append(imgCalendario, sectionInfoFecha);
@@ -166,11 +177,11 @@ const lista_inputsLetras = Array.from(document.querySelectorAll("#letras"));
 
 const expresiones = {
     letra: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-    factura: /^\d{5,16}$/
+    factura: /^\d{3,5}$/
 }
 
 lista_inputsLetras.forEach((input) => {
-    input.addEventListener('keyup', ()=>{
+    input.addEventListener('keyup', () => {
         if (expresiones.letra.test(input.value)) {
             input.classList.remove('error');
             input.classList.add('bien');
@@ -180,10 +191,10 @@ lista_inputsLetras.forEach((input) => {
             input.classList.add('error');
             input.classList.remove('bien');
             console.log("mal");
-            
+
         }
     });
-    input.addEventListener('blur', ()=>{
+    input.addEventListener('blur', () => {
         if (expresiones.letra.test(input.value)) {
             input.classList.remove('error');
             input.classList.add('bien');
@@ -197,42 +208,64 @@ lista_inputsLetras.forEach((input) => {
     });
 });
 
-inputFacturacion.addEventListener('keyup', ()=>{
-        if (expresiones.factura.test(inputFacturacion.value)) {
-            inputFacturacion.classList.remove('error');
-            inputFacturacion.classList.add('bien');
-            console.log("bien")
+inputFacturacion.addEventListener('keyup', () => {
+    if (expresiones.factura.test(inputFacturacion.value)) {
+        inputFacturacion.classList.remove('error');
+        inputFacturacion.classList.add('bien');
+        console.log("bien")
 
-        } else {
-            inputFacturacion.classList.add('error');
-            inputFacturacion.classList.remove('bien');
-            console.log("mal");
-            
-        }
-    });
-    inputFacturacion.addEventListener('blur', ()=>{
-        if (expresiones.factura.test(inputFacturacion.value)) {
-            inputFacturacion.classList.remove('error');
-            inputFacturacion.classList.add('bien');
-            console.log("bien")
+    } else {
+        inputFacturacion.classList.add('error');
+        inputFacturacion.classList.remove('bien');
+        console.log("mal");
 
-        } else {
-            inputFacturacion.classList.add('error');
-            inputFacturacion.classList.remove('bien');
-            console.log("mal");
-        }
-    });
+    }
+});
+inputFacturacion.addEventListener('blur', () => {
+    if (expresiones.factura.test(inputFacturacion.value)) {
+        inputFacturacion.classList.remove('error');
+        inputFacturacion.classList.add('bien');
+        console.log("bien")
+
+    } else {
+        inputFacturacion.classList.add('error');
+        inputFacturacion.classList.remove('bien');
+        console.log("mal");
+    }
+});
 
 botonConsultar.addEventListener('click', () => {
     loader.style.display = "block";
+    body.style.opacity = "50%";
     setTimeout(() => {
         loader.style.display = "none";
-        cargarModeloNegocio();
         imgFondo.style.display = "none";
-        main.style.height = "100%"
+        main.style.height = "100%";
+        body.style.opacity = "100%";
+        divAbajo.style.display = "none";
+        contenedorBuscar.style.height = "200px";
+        botonFiltrar.style.display = "block";
+        botonGenerar.style.display = "block";
+        tabla.style.display = "block";
     }, 400);
 
 });
+
+botonFiltrar.addEventListener('click', () => {
+    loader.style.display = "block";
+    body.style.opacity = "50%";
+    setTimeout(() => {
+        loader.style.display = "none";
+        imgFondo.style.display = "block";
+        main.style.height = "100%";
+        body.style.opacity = "100%";
+        divAbajo.style.display = "block";
+        contenedorBuscar.style.height = "100%";
+        botonFiltrar.style.display = "none";
+        botonGenerar.style.display = "none";
+        tabla.style.display = "none";
+    }, 400);
+})
 
 
 fetch('./json/monedas.json')
@@ -247,21 +280,109 @@ fetch('./json/monedas.json')
         })
     });
 
-const Divnegocio = document.createElement('div');
-function cargarModeloNegocio() {
-    fetch('./json/negocios.json')
+const tabla = document.createElement('table');
+
+function cargarFiltro() {
+    fetch('./json/filtro.json')
         .then(respuesta => respuesta.json())
         .then(respuesta => {
-            respuesta.forEach(modelo => {
-                Divnegocio.classList.add('divNegocio');
-                let negocio = document.createElement('div');
-                negocio.classList.add('negocio');
-                main.append(Divnegocio);
-                Divnegocio.append(negocio);
-                negocio.innerHTML += `
-          ${modelo.nombre}-${modelo.tipoDocumentoFacturaDiaria}${modelo.descripcionDocumentoFacturaDiaria}-${modelo.conceptoCXC}
-          `
+            tabla.innerHTML = ` 
+                                <th>Ver</th>
+                                <th>Ordenes de facturación</th>
+                                <th>Fecha de registro</th>
+                                <th>Nombre del cliente</th>
+                                <th>Forma de pago</th>
+                                <th>Forma de negocio</th>
+                                <th>Fecha de vencimiento</th>
+                                <th>Valor total a cobrar</th>
+                                <th>Valor anticipo</th>
+                                <th>Asociar anticipo</th>
+                                `
+            respuesta.forEach(filtro => {
+                tabla.classList.add('tabla');
+                main.append(tabla);
+                tabla.innerHTML += `
+            <td class="documentos"><div class="botonDocumentoVerde"><img src="./Imagenes/documento_verde.svg"><img src="./Imagenes/adobe_verde.svg"></div></td>
+            <td>${filtro.codigoOrdenDeFacturacion}</td>
+            <td>${filtro.fechaRegistro}</td>
+            <td class="cliente">${filtro.clienteNombre}</td>
+            <td>${filtro.formaPago}</td>
+            <td>${filtro.modeloNegocio}</td>
+            <td>${filtro.fechaVencimiento}</td>
+            <td>${filtro.valorTotalACobrar}</td>
+            <td>${filtro.valorAnticipo}</td>
+            <td>${filtro.asociarAnticipo}</td>
+            <td class="imgChecked"><div></div></td>
+
+            `
+
             })
         })
 };
+cargarFiltro();
 
+
+inputCliente.addEventListener('keyup', buscarClientes);
+
+function buscarClientes() {
+
+    filtro = inputCliente.value.toUpperCase();
+    li = tabla.querySelectorAll('tbody');
+
+    for (i = 0; i < li.length; i++) {
+
+        textValue = li[i].querySelectorAll('tr')[0].innerText;
+
+        if (textValue === filtro > -1) {
+
+            li[i].style.display = "";
+            console.log("se encontro")
+
+        } else {
+            li[i].style.display = "none";
+            console.log("no se encontro")
+
+        }
+    }
+}
+
+const divGenerado = document.createElement('div');
+const barraAzul = document.createElement('div');
+const tituloBarraAzul = document.createElement('div');
+tituloBarraAzul.innerHTML = "Órdenes de facturación procesadas";
+tituloBarraAzul.classList.add('tituloBarraAzul')
+const equis = document.createElement('button');
+divGenerado.classList.add('divGenerado');
+barraAzul.classList.add('barraAzul');
+equis.classList.add('equis');
+equis.innerHTML = "X"
+divGenerado.style.display = "none";
+main.append(divGenerado);
+divGenerado.append(barraAzul);
+barraAzul.append(tituloBarraAzul,equis);
+
+equis.addEventListener('click',()=>{
+    divGenerado.style.display = "none"
+})
+
+botonGenerar.addEventListener('click', () => {
+    body.style.opacity = "50%";
+    loader.style.display = "block";
+    setTimeout(() => {
+        body.style.opacity = "100%";
+        loader.style.display = "none";
+        divGenerado.style.display = "block";
+    }, 400);
+})
+
+let checks = Array.from(document.querySelectorAll('.checkbox'))
+
+checks.map((check) => {
+
+    check.addEventListener('click', () => {
+
+        check.classList.add('imgChecked');
+
+    })
+
+});
